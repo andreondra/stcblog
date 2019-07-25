@@ -1,0 +1,107 @@
+// = category styles =
+// ===============================================
+
+.category{
+
+    @include flexbox{
+
+        flex-direction: column;
+    };
+
+    &__header{
+
+        margin-top: 80px;
+        width: 50vw;
+        @include flexbox{
+
+            justify-content: top;
+            flex-direction: column;
+        }
+
+        h1{
+
+            color: $themePrimary;
+            margin: 0;
+        }
+
+        p{
+
+            margin: 1.5rem 0;
+            text-align: justify;
+        }
+
+        img{
+
+            width: 120px;
+        }
+    }
+
+    &__articles{
+
+        width: 90vw;
+        max-width: 1000px;
+
+        &__article{
+
+            @include flexbox{
+
+                justify-content: flex-start; 
+            };
+            border: 1px solid $themePrimary;
+            margin-top: 25px;
+            padding: 15px;
+            @include ms-depth-4;
+            @include ms-motion-scaleDownIn;
+            transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+
+            &:hover{
+
+                cursor: pointer;
+                transform: scale(1.025);   
+                @include ms-depth-16;
+            }
+
+            &__thumbnail{
+
+            }
+
+            &__text{
+
+                margin-left: 60px;
+
+                @include flexbox{
+
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                };
+
+                &__title{
+
+                    color: $themePrimary;
+                    margin: 0;
+                }
+
+                &__excerpt{
+
+
+                }
+                
+            }
+
+            &__meta{
+
+                @include flexbox;
+                span{
+
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    &__footer{
+
+
+    }
+}

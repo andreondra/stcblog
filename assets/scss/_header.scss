@@ -1,0 +1,70 @@
+// = header =
+// ===============================================
+
+.nav{ 
+ 
+    background: $themePrimary;
+    height: 6rem; 
+    @include flexbox;
+    width: 100vw;
+
+    ul{
+        
+        width: 100%;
+        @include flexbox{
+            justify-content: space-between;
+        };
+        margin: 0;
+        list-style-type: none;
+
+        .stclogo{
+
+            height: 5rem;
+        }
+    }
+
+    &__buttons{
+
+        @include flexbox;
+
+        &__search{
+
+            @include flexbox;
+            position: relative;
+
+            &__button{
+
+                position: absolute;
+                right: 0.25rem;
+                top: 0.25rem;
+                z-index: 150;
+                font-size: 1.5rem;
+                color: $themePrimary;
+            }
+
+            &__input{
+
+                box-sizing: border-box;
+                z-index: 140;
+                height: 2rem;
+                font-size: 1.5rem;
+                outline: none;
+                border-radius: 2px;
+                border: 0;
+                padding-left: 0.5rem;
+                padding-right: 1.5rem;
+                width: 2rem; 
+
+                &:hover{
+
+                    width: 200px;
+                }
+            }
+        }
+
+        &__menu{
+
+            color: $white;
+        }
+    }
+}

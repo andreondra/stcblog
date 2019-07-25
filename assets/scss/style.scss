@@ -1,0 +1,48 @@
+/*
+Theme Name: STC Blog
+Author: Andrew Golasowski
+Description: Custom template for STC Blog
+Version: 0.1.0
+Tags: stc 
+*/
+
+// = core style =
+// ===============================================
+
+// normalize
+// ===============================================
+@import "normalize/import-now";
+
+// fabric theme
+// ===============================================
+@import "fabric/_Fabric.scss";   
+
+// variables
+// ===============================================
+@import "_variables.scss";
+
+// mixins
+// ===============================================
+@import "_mixins.scss";
+
+// global styles
+// ===============================================
+@import "_global.scss";
+
+// header.php
+// ===============================================
+@import "_header.scss";
+
+// footer.php
+// ===============================================
+@import "_footer.scss";
+
+// index.php
+// ===============================================
+@import "_index.scss";
+
+// category.php
+// ===============================================
+@import "_category.scss";
+
+
