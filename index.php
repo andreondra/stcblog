@@ -34,7 +34,10 @@
                 <?php endwhile; endif; ?>
             </section>
             <footer class="category__footer">
-                <?php the_posts_pagination(); ?>
+                <?php the_posts_pagination([
+                    'prev_text' => '« Předcházející',
+                    'next_text' => 'Následující »'
+                    ]); ?>
             </footer>
         </main>
 
