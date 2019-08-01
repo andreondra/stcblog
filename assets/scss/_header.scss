@@ -15,6 +15,7 @@
             justify-content: space-between;
         };
         margin: 0;
+        padding: 0 20px;
         list-style-type: none;
 
         .stclogo{
@@ -34,9 +35,13 @@
 
             &__button{
 
+                @include flexbox;
                 position: absolute;
-                right: 0.25rem;
-                top: 0.25rem;
+                right: 0;
+                top: 0;
+                padding: 0.25rem 0.25rem;
+                width: 1.5rem;
+                height: 1.5rem;
                 z-index: 150;
                 font-size: 1.5rem;
                 color: $themePrimary;
@@ -44,20 +49,22 @@
 
             &__input{
 
+                overflow: hidden;
                 box-sizing: border-box;
                 z-index: 140;
                 height: 2rem;
+                width: 2rem;
                 font-size: 1.5rem;
                 outline: none;
                 border-radius: 2px;
                 border: 0;
-                padding-left: 0.5rem;
-                padding-right: 1.5rem;
-                width: 2rem; 
+                transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
 
-                &:hover{
+                &.active{ 
 
-                    width: 200px;
+                    width: 300px;
+                    padding-left: 10px;
+                    padding-right: 2.25rem;
                 }
             }
         }

@@ -43,5 +43,6 @@
 
         <?php get_footer(); ?>
         <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/jquery.min.js"></script>
+        <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/main.js"></script>
     </body>
 </html>
