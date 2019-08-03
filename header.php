@@ -1,4 +1,4 @@
-<header>
+<header class="header">
     <nav class="nav ms-depth-8">
         <ul>
             <li><a><img class="stclogo" src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/stclogo.svg"/></a></li>

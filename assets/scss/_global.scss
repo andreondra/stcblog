@@ -1,6 +1,10 @@
 // = global styles =
 // ===============================================
 
+*{
+    box-sizing: border-box;
+}
+
 html{
 
     margin: 0;
@@ -8,8 +12,10 @@ html{
 
 body{
 
+    min-height: 100%;
     @include flexbox{
-
+        
+        justify-content: flex-start;
         flex-direction: column;
     };
 }

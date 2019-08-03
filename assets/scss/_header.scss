@@ -1,77 +1,79 @@
 // = header =
 // ===============================================
 
-.nav{ 
+.header{
+
+    .nav{ 
  
-    background: $themePrimary;
-    height: 6rem; 
-    @include flexbox;
-    width: 100vw;
-
-    ul{
-        
-        width: 100%;
-        @include flexbox{
-            justify-content: space-between;
-        };
-        margin: 0;
-        padding: 0 20px;
-        list-style-type: none;
-
-        .stclogo{
-
-            height: 5rem;
-        }
-    }
-
-    &__buttons{
-
+        background: $themePrimary;
+        height: 6rem; 
         @include flexbox;
-
-        &__search{
-
-            @include flexbox;
-            position: relative;
-
-            &__button{
-
-                @include flexbox;
-                position: absolute;
-                right: 0;
-                top: 0;
-                padding: 0.25rem 0.25rem;
-                width: 1.5rem;
-                height: 1.5rem;
-                z-index: 150;
-                font-size: 1.5rem;
-                color: $themePrimary;
+        width: 100vw;
+    
+        ul{
+            
+            width: 100%;
+            @include flexbox{
+                justify-content: space-between;
+            };
+            margin: 0;
+            padding: 0 20px;
+            list-style-type: none;
+    
+            .stclogo{
+    
+                height: 5rem;
             }
-
-            &__input{
-
-                overflow: hidden;
-                box-sizing: border-box;
-                z-index: 140;
-                height: 2rem;
-                width: 2rem;
-                font-size: 1.5rem;
-                outline: none;
-                border-radius: 2px;
-                border: 0;
-                transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
-
-                &.active{ 
-
-                    width: 300px;
-                    padding-left: 10px;
-                    padding-right: 2.25rem;
+        }
+    
+        &__buttons{
+    
+            @include flexbox;
+    
+            &__search{
+    
+                @include flexbox;
+                position: relative;
+    
+                &__button{
+    
+                    @include flexbox;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 2rem;
+                    height: 2rem;
+                    z-index: 150;
+                    font-size: 1.5rem;
+                    color: $themePrimary;
+                }
+    
+                &__input{
+    
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    z-index: 140;
+                    height: 2rem;
+                    width: 2rem;
+                    font-size: 1.5rem;
+                    outline: none;
+                    border-radius: 2px;
+                    border: 0;
+                    transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+    
+                    &.active{ 
+    
+                        width: 300px;
+                        padding-left: 10px;
+                        padding-right: 2.25rem;
+                    }
                 }
             }
-        }
-
-        &__menu{
-
-            color: $white;
+    
+            &__menu{
+    
+                color: $white;
+            }
         }
     }
 }

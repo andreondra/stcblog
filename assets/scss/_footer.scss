@@ -4,6 +4,28 @@
 .footer{
 
     width: 100vw;
-    height: 0;
-    background: $neutralSecondary;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 20px;
+    background: $themePrimary;
+    @include flexbox{
+        justify-content: space-between;
+    };
+
+    &__copyright{
+
+        color: $white;
+    } 
+
+    &__socials{
+
+        @include flexbox;
+        &__icon{
+
+            height: 30px;
+            margin-right: 10px;
+        }
+    }
 }
