@@ -9,10 +9,10 @@
     <body class="ms-Fabric">
         <?php get_header(); ?>
 
-        <main class="category">
+        <main class="main category">
             <header class="category__header">
-                <h1><?php single_cat_title(); ?></h1>
-                <?php echo category_description(); ?>
+                <h1><?php echo get_bloginfo('name'); ?></h1>
+                <p><?php echo get_bloginfo('description'); ?></p>
                 <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/mslogo.svg"/>
             </header>
             <section class="category__articles">

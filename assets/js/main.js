@@ -5,27 +5,31 @@ $(document).ready(function(){
 
 function search(){
 
-    $('.nav__buttons__search').on({
+    $('#input_search').on({
 
         mouseenter: () => {
-            $('.nav__buttons__search__input').addClass('active');
+            $('#input_searchInput').addClass('active');
+            $('#section_header').addClass('hidden');
         },
 
         focuson: () => {
-            $('.nav__buttons__search__input').addClass('active');
+            $('#input_searchInput').addClass('active');
+            $('#section_header').addClass('hidden');
         },
 
         mouseleave: () => {
 
-            if(!$('.nav__buttons__search__input').val() && !$('.nav__buttons__search__input').is(':focus')){
-                $('.nav__buttons__search__input').removeClass('active');
+            if(!$('#input_searchInput').val() && !$('#input_searchInput').is(':focus')){
+                $('#input_searchInput').removeClass('active');
+                $('#section_header').removeClass('hidden');
             } 
         },
 
         focusout: () => {
 
-            if(!$('.nav__buttons__search__input').val()){
-                $('.nav__buttons__search__input').removeClass('active');
+            if(!$('#input_searchInput').val()){
+                $('#input_searchInput').removeClass('active');
+                $('#section_header').removeClass('hidden');
             } 
         }
     });

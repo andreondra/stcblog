@@ -3,76 +3,133 @@
 
 .header{
 
-    .nav{ 
+    width: 100%;
+    @include flexbox{
+        flex-direction: column;
+    }
+    
+    &__logo{ 
  
         background: $themePrimary;
-        height: 6rem; 
-        @include flexbox;
-        width: 100vw;
-    
-        ul{
-            
-            width: 100%;
-            @include flexbox{
-                justify-content: space-between;
-            };
-            margin: 0;
-            padding: 0 20px;
-            list-style-type: none;
-    
-            .stclogo{
-    
-                height: 5rem;
+        height: 6rem;   
+        width: 100%;
+        @include flexbox{
+            justify-content: space-between;
+        };
+
+        @include for-size('tablet'){
+            &.hidden{
+
+                @include flexbox{
+                    justify-content: flex-end;
+                };
             }
         }
+
+        margin: 0;
+        padding: 0 20px;
+        list-style-type: none;
+
+        &__stclogo{
+
+            height: 5rem;
+            &__std{
+                height: 100%;
+                display: block;
+            } 
+
+            &__small{
+                height: 100%;
+                display: none; 
+            }
+
+            @include for-size('bp-down-500'){
+
+                &__std{
+                    display: none; 
+                } 
     
-        &__buttons{
-    
-            @include flexbox;
-    
-            &__search{
-    
-                @include flexbox;
-                position: relative;
-    
-                &__button{
-    
-                    @include flexbox;
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    width: 2rem;
-                    height: 2rem;
-                    z-index: 150;
-                    font-size: 1.5rem;
-                    color: $themePrimary;
-                }
-    
-                &__input{
-    
-                    overflow: hidden;
-                    box-sizing: border-box;
-                    z-index: 140;
-                    height: 2rem;
-                    width: 2rem;
-                    font-size: 1.5rem;
-                    outline: none;
-                    border-radius: 2px;
-                    border: 0;
-                    transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
-    
-                    &.active{ 
-    
-                        width: 300px;
-                        padding-left: 10px;
-                        padding-right: 2.25rem;
-                    }
+                &__small{
+                    display: block;
                 }
             }
-    
-            &__menu{
-    
-                color: $white;
+        }
+
+        &__search{
+
+            @include flexbox;
+            position: relative;
+
+            &__button{
+
+                @include flexbox;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 2rem;
+                height: 2rem;
+                z-index: 150;
+                font-size: 1.5rem;
+                color: $themePrimary;
+            }
+
+            &__input{
+
+                overflow: hidden;
+                box-sizing: border-box;
+                z-index: 140;
+                height: 2rem;
+                width: 2rem;
+                font-size: 1.5rem;
+                outline: none;
+                border-radius: 2px;
+                border: 0;
+                transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+
+                &.active{ 
+
+                    width: 300px;
+                    padding-left: 10px;
+                    padding-right: 2.25rem;
+                }
+            }
+        }
+
+        &__menu{
+
+            color: $white;
+        }
+    }
+
+    &__nav{
+
+        background: $themeDarker;
+        width: 100%;
+
+        ul{
+
+            margin: 0;
+            padding-left: 20px;
+            list-style-type: none;
+
+            li{
+
+                a{
+
+                    display: inline-block;
+                    padding: 1rem;
+                    color: $white;
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    @include ms-motion-scaleDownIn;
+                    transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+
+                    &:hover{
+
+                        //background: $themePrimary;
+                        transform: scale(1.1);   
+                    }
+                }
             }
         }
     }

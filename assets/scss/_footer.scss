@@ -3,23 +3,21 @@
 
 .footer{
 
-    width: 100vw;
+    margin-top: auto;
+    width: 100%;
     height: 60px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
     padding: 0 20px;
-    background: $themePrimary;
+    background: $neutralLight;
     @include flexbox{
         justify-content: space-between;
     };
 
     &__copyright{
 
-        color: $white;
-    } 
+        color: $neutralDark;
+    }  
 
-    &__socials{
+    &__socials{  
 
         @include flexbox;
         &__icon{

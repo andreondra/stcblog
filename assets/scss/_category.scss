@@ -10,7 +10,6 @@
 
     &__header{
 
-        margin-top: 80px;
         width: 50vw;
         @include flexbox{
 
@@ -26,8 +25,8 @@
 
         p{
 
-            margin: 1.5rem 0;
-            text-align: justify;
+            margin: 2rem 0;
+            text-align: center;
         }
 
         img{
@@ -40,6 +39,7 @@
 
         width: 90vw;
         max-width: 1000px;
+        margin-top: 2rem;
 
         &__article{
 
@@ -47,6 +47,14 @@
 
                 justify-content: flex-start; 
             };
+
+            @include for-size('tablet'){
+
+                @include flexbox{
+                    flex-direction: column;
+                }
+            }
+
             //border: 1px solid $themePrimary;
             margin-top: 25px;
             padding: 15px;
@@ -75,6 +83,15 @@
                     align-items: flex-start;
                     justify-content: center;
                 };
+
+                @include for-size('tablet'){
+
+                    @include flexbox{
+                        flex-direction: column;
+                    }
+
+                    margin: 20px 0 0 0;
+                }
 
                 &__title{
 

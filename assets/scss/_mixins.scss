@@ -23,8 +23,8 @@
     } 
 
     // natural breakpoints (project-specific)
-    @else if $size == 'bp-1'{
- 
+    @else if $size == 'bp-down-500'{
+        @media (max-width: 500px) { @content; }
     }
 
     // custom natural breakpoints (project+element-specific)
