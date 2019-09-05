@@ -31,87 +31,90 @@
 
         img{
 
-            margin-top: 2rem;
+            margin-top: 2.5rem;
             width: 120px;
         }
     }
 
-    &__articles{
+    &__posts{
 
         width: 90vw;
         max-width: 1000px;
         margin-top: 2rem;
 
-        &__article{
+        .excerpt{
 
+            color: inherit;
+            text-decoration: none;
+        
             @include flexbox{
-
+        
                 justify-content: flex-start; 
             };
-
+        
             @include for-size('tablet'){
-
+        
                 @include flexbox{
                     flex-direction: column;
                 }
             }
-
+        
             //border: 1px solid $themePrimary;
             margin-top: 25px;
             padding: 15px;
             @include ms-depth-4;
             @include ms-motion-scaleDownIn;
             transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
-
+        
             &:hover{
-
+        
                 cursor: pointer;
                 transform: scale(1.025);   
                 @include ms-depth-16;
             }
-
+        
             &__thumbnail{
-
+        
             }
-
+        
             &__text{
-
+        
                 margin-left: 60px;
-
+        
                 @include flexbox{
-
+        
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: center;
                 };
-
+        
                 @include for-size('tablet'){
-
+        
                     @include flexbox{
                         flex-direction: column;
                     }
-
+        
                     margin: 20px 0 0 0;
                 }
-
+        
                 &__title{
-
+        
                     color: $themePrimary;
                     margin: 0;
                 }
-
+        
                 &__excerpt{
-
-
+        
+        
                 }
                 
             }
-
+        
             &__meta{
-
+        
                 @include flexbox;
                 span{
-
+        
                     margin-right: 1rem;
                 }
             }

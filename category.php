@@ -15,22 +15,24 @@
                 <?php echo category_description(); ?>
                 <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/mslogo.svg"/>
             </header>
-            <section class="feed__articles">
+            <section class="feed__posts">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                <article class="feed__articles__article">
-                    <div class="feed__articles__article__thumbnail">
-                        <?php the_post_thumbnail([300, 200]); ?>
-                    </div>
-                    <div class="feed__articles__article__text">
-                        <h2 class="feed__articles__article__text__title"><?php the_title(); ?></h2>
-                        <?php the_excerpt(); ?>
-                        <div class="feed__articles__article__meta">
-                            <span class="feed__articles__article__meta__date"><?php echo get_the_date(); ?></span>
-                            <span>•</span>
-                            <span class="feed__articles__article__meta__readtime">Doba čtení: <?php echo reading_time(); ?></span>
-                        </div>
-                    </div>
-                </article>    
+                        <article>
+                            <a class="excerpt" href="<?php the_permalink(); ?>">
+                                <div class="excerpt__thumbnail">
+                                    <?php the_post_thumbnail([300, 200]); ?>
+                                </div>
+                                <div class="excerpt_text">
+                                    <h2 class="excerpt__text__title"><?php the_title(); ?></h2>
+                                    <?php the_excerpt(); ?>
+                                    <div class="excerpt__text__meta">
+                                        <span class="excerpt__text__meta__date"><?php echo get_the_date(); ?></span>
+                                        <span>•</span>
+                                        <span class="excerpt__text__meta__readtime">Doba čtení: <?php echo reading_time(); ?></span>
+                                    </div>
+                                </div>
+                            </a>    
+                        </article>
                 <?php endwhile; endif; ?>
             </section>
             <footer class="feed__footer">

@@ -8,10 +8,14 @@
     </head>
     <body class="ms-Fabric">
         <?php get_header(); ?>
-        <div class="fouroufour__picture">
+        <main class="main feed">
+            <header class="feed__header">
+                <h1>Jejda!</h1>
+                <p>Někde se stala chyba. Tým kočiček na vyřešení problému už usilovně pracuje. Mezitím se koukni na <a href="<?php echo esc_url( home_url( '/' ) ); ?>">hlavní stránku</a>, nebo zkus něco vyhledat.</p>
+                <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/mslogo.svg"/>
+            </header>
             <img id="404-picture" src="<?php echo get_theme_file_uri( 'assets/img/cat.svg'); ?>"/>
-        </div>
-        
+        </main>
         <?php get_footer(); ?>
     </body>
 </html>
