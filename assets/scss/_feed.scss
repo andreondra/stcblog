@@ -1,7 +1,7 @@
-// = category styles =
+// = feed styles (index.php, category.php) =
 // ===============================================
 
-.category{
+.feed{
 
     @include flexbox{
 
@@ -25,12 +25,13 @@
 
         p{
 
-            margin: 2rem 0;
+            margin: 2rem 0 0 0;
             text-align: center;
         }
 
         img{
 
+            margin-top: 2rem;
             width: 120px;
         }
     }

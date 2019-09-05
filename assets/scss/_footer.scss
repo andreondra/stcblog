@@ -12,9 +12,25 @@
         justify-content: space-between;
     };
 
+    @include for-size('bp-down-500'){
+
+        min-height: 100px;
+        padding: 20px;
+
+        @include flexbox{
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+    }
+
     &__copyright{
 
         color: $neutralDark;
+
+        @include for-size('bp-down-500'){
+        
+            margin-top: 15px;
+        }
     }  
 
     &__socials{  
@@ -23,7 +39,7 @@
         &__icon{
 
             height: 30px;
-            margin-right: 10px;
+            margin-right: 20px;
         }
     }
 }

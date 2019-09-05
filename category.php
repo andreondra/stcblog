@@ -9,31 +9,31 @@
     <body class="ms-Fabric">
         <?php get_header(); ?>
 
-        <main class="main category">
-            <header class="category__header">
+        <main class="main feed">
+            <header class="feed__header">
                 <h1><?php single_cat_title(); ?></h1>
                 <?php echo category_description(); ?>
                 <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/mslogo.svg"/>
             </header>
-            <section class="category__articles">
+            <section class="feed__articles">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                <article class="category__articles__article">
-                    <div class="category__articles__article__thumbnail">
+                <article class="feed__articles__article">
+                    <div class="feed__articles__article__thumbnail">
                         <?php the_post_thumbnail([300, 200]); ?>
                     </div>
-                    <div class="category__articles__article__text">
-                        <h2 class="category__articles__article__text__title"><?php the_title(); ?></h2>
+                    <div class="feed__articles__article__text">
+                        <h2 class="feed__articles__article__text__title"><?php the_title(); ?></h2>
                         <?php the_excerpt(); ?>
-                        <div class="category__articles__article__meta">
-                            <span class="category__articles__article__meta__date"><?php echo get_the_date(); ?></span>
+                        <div class="feed__articles__article__meta">
+                            <span class="feed__articles__article__meta__date"><?php echo get_the_date(); ?></span>
                             <span>•</span>
-                            <span class="category__articles__article__meta__readtime">Doba čtení: <?php echo reading_time(); ?></span>
+                            <span class="feed__articles__article__meta__readtime">Doba čtení: <?php echo reading_time(); ?></span>
                         </div>
                     </div>
                 </article>    
                 <?php endwhile; endif; ?>
             </section>
-            <footer class="category__footer">
+            <footer class="feed__footer">
                 <?php the_posts_pagination([
                     'prev_text' => '« Předcházející',
                     'next_text' => 'Následující »'
