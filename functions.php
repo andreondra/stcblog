@@ -104,4 +104,5 @@ function reading_time() {
 
     return $totalreadingtime;
 }
+
 ?>

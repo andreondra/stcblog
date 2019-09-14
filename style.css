@@ -17756,4 +17756,48 @@ p {
 .fouroufour__picture {
   margin-top: 20px;
 }
+
+.post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  flex-direction: column;
+}
+
+.post__header {
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: top;
+      -ms-flex-pack: top;
+          justify-content: top;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.post__header h1 {
+  color: #0078d4;
+  margin: 0;
+}
 /*# sourceMappingURL=style.css.map */

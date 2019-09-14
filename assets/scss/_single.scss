@@ -1,0 +1,31 @@
+// = posts styles (single.php) =
+// ===============================
+
+
+.post{
+
+    @include flexbox{
+
+        flex-direction: column;
+
+    };
+
+    &__header{
+
+        width: 50vw;
+        @include flexbox{
+
+            justify-content: top;
+            flex-direction: column;
+
+        }
+
+        h1{
+
+            color: $themePrimary;
+            margin: 0;
+
+        }
+    }
+
+}
