@@ -7,7 +7,6 @@
     @include flexbox{
 
         flex-direction: column;
-
     };
 
     &__header{
@@ -17,15 +16,36 @@
 
             justify-content: top;
             flex-direction: column;
-
         }
 
         h1{
 
             color: $themePrimary;
             margin: 0;
-
         }
+
+        &__meta{
+
+             margin-top: 1rem;
+
+             &__category{
+
+                a{
+                    text-decoration: none;
+                    color: $themePrimary;
+                }
+            }
+        }
+    }
+
+    &__content{
+
+        margin-top: 2rem;
+    }
+
+    &__footer{
+
+        margin-top: 2rem;
     }
 
 }
