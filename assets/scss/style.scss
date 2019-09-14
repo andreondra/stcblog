@@ -1,6 +1,6 @@
 /*
 Theme Name: STC Blog
-Author: Andrew Golasowski
+Author: Andrew Golasowski, Petr Kucera
 Description: Custom template for STC Blog
 Version: 0.1.0
 Tags: stc 
@@ -48,4 +48,8 @@ Tags: stc
 // 404.php
 // ===============================================
 @import "_404.scss";
+
+// single.php
+// ===============================================
+@import "_single.scss";
 
