@@ -10,7 +10,7 @@
         <?php get_header(); ?>
 
         <main class="main feed">
-            <header class="feed__header">
+            <header class="main__header">
                 <h1><?php echo get_bloginfo('name'); ?></h1>
                 <p><?php echo get_bloginfo('description'); ?></p>
                 <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/mslogo.svg"/>
@@ -22,7 +22,7 @@
                                 <div class="excerpt__thumbnail">
                                     <?php the_post_thumbnail([300, 200]); ?>
                                 </div>
-                                <div class="excerpt_text">
+                                <div class="excerpt__text">
                                     <h2 class="excerpt__text__title"><?php the_title(); ?></h2>
                                     <?php the_excerpt(); ?>
                                     <div class="excerpt__text__meta">
@@ -44,7 +44,5 @@
         </main>
 
         <?php get_footer(); ?>
-        <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/jquery.min.js"></script>
-        <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/main.js"></script>
     </body>
 </html>

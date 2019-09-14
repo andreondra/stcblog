@@ -3,39 +3,6 @@
 
 .feed{
 
-    @include flexbox{
-
-        flex-direction: column;
-    };
-
-    &__header{
-
-        width: 50vw;
-        @include flexbox{
-
-            justify-content: top;
-            flex-direction: column;
-        }
-
-        h1{
-
-            color: $themePrimary;
-            margin: 0;
-        }
-
-        p{
-
-            margin: 2rem 0 0 0;
-            text-align: center;
-        }
-
-        img{
-
-            margin-top: 2.5rem;
-            width: 120px;
-        }
-    }
-
     &__posts{
 
         width: 90vw;
@@ -103,21 +70,24 @@
                     margin: 0;
                 }
         
-                &__excerpt{
+                p{
+                    margin: 1rem 0 0 0; 
+                }
+
+                &__meta{
         
-        
+                    margin-top: 1rem;
+                    @include flexbox{
+                        justify-content: flex-start;
+                    };
+                    span{
+            
+                        margin-right: 1rem;
+                    }
                 }
                 
             }
         
-            &__meta{
-        
-                @include flexbox;
-                span{
-        
-                    margin-right: 1rem;
-                }
-            }
         }
     }
 

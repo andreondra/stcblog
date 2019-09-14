@@ -10,7 +10,7 @@
         <?php get_header(); ?>
 
         <main class="main feed">
-            <header class="feed__header">
+            <header class="main__header">
                 <h1><?php single_cat_title(); ?></h1>
                 <?php echo category_description(); ?>
                 <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/mslogo.svg"/>
@@ -44,7 +44,5 @@
         </main>
 
         <?php get_footer(); ?>
-        <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/jquery.min.js"></script>
-        <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/main.js"></script>
     </body>
 </html>
