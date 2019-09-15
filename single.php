@@ -31,9 +31,9 @@
                 <div class="post__footer__author">
                     <div class="post__footer__author__photo"><?php echo get_avatar( get_the_author_meta( 'ID' )); ?></div>
                     <div class="post__footer__author__data">
-                        <h1 class="post__footer__author__data__name"><?php the_author(); ?></h1>
+                        <h1 class="post__footer__author__data__name"> <!--<a href="<?php echo the_author_link(); ?>">--><?php the_author(); ?><!--</a>--> </h1>
                         <p class="post__footer__author__data__description"><?php the_author_meta('description'); ?> </p>
-                        <p class="post__footer__author__data__email"><?php the_author_meta('user_email'); ?></p>
+                        <p class="post__footer__author__data__email">Email: <a href="mailto:<?php the_author_meta('user_email'); ?>"><?php the_author_meta('user_email'); ?></a></p>
                     </div>
                 </div>
             </footer>  
