@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory');?>/style.css"/>
+        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory')?>/style.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title><?php echo get_bloginfo('name'); ?></title>
         <?php wp_head(); ?>
@@ -9,11 +9,10 @@
     <body class="ms-Fabric">
         <?php get_header(); ?>
 
-        <main class="main feed">
+        <main class="main search">
             <header class="main__header">
                 <h1><?php echo get_bloginfo('name'); ?></h1>
-                <p><?php echo get_bloginfo('description'); ?></p>
-                <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/mslogo.svg"/>
+                <p>Výsledky vyhledávání pro: </p>
             </header>
             <section class="feed__posts">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

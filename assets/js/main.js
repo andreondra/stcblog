@@ -1,9 +1,13 @@
 $(document).ready(function(){
 
-    search();
+    searchForm();
 });
 
-function search(){
+function searchForm(){
+
+    $('#input_searchSubmit').on('click', function(){
+        $('#input_search').submit();
+    });
 
     $('#input_search').on({
 

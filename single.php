@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory');?>/style.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>STC blog <?php wp_title('| ', true,'left'); ?></title>
+        <title><?php echo get_bloginfo('name'); ?> <?php wp_title('| ', true,'left'); ?></title>
         <?php wp_head(); ?>
     </head>
     <body class="ms-Fabric">

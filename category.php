@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory');?>/style.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>STC blog</title>
+        <title><?php echo get_bloginfo('name'); ?></title>
         <?php wp_head(); ?>
     </head>
     <body class="ms-Fabric">
@@ -22,7 +22,7 @@
                                 <div class="excerpt__thumbnail">
                                     <?php the_post_thumbnail([300, 200]); ?>
                                 </div>
-                                <div class="excerpt_text">
+                                <div class="excerpt__text">
                                     <h2 class="excerpt__text__title"><?php the_title(); ?></h2>
                                     <?php the_excerpt(); ?>
                                     <div class="excerpt__text__meta">

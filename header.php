@@ -4,12 +4,7 @@
             <img class="header__logo__stclogo__std" src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/stclogo_std.svg"/>
             <img class="header__logo__stclogo__small" src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/stclogo_small.svg"/>
         </a>
-        <div>
-            <div id="input_search" class="header__logo__search">
-                <a><i class="ms-Icon ms-Icon--Search header__logo__search__button" aria-hidden="true"></i></a>
-                <input placeholder="Hledat" id="input_searchInput" class="header__logo__search__input" type="text"/>
-            </div>
-        </div>
+        <?php get_search_form(); ?>
     </section>
     <nav class="header__nav">
         <?php wp_nav_menu(); ?>
