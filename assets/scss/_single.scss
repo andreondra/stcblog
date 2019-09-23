@@ -6,7 +6,7 @@
 
     @include flexbox{
 
-        width: 90vw;   
+        width: 80vw;   
         flex-direction: column;
     };
 
@@ -36,6 +36,21 @@
                     color: $themePrimary;
                 }
             }
+
+            &__tags{
+
+                white-space: nowrap;
+
+                a{
+
+                    text-decoration: none;
+                    color: $themePrimary;
+                    
+                    &:before{
+                        content: "#";
+                    }
+                }
+            }
         }
     }
 
@@ -44,9 +59,8 @@
     }
 
     &__footer{
-        width: 90vw;
-        margin-top: 4rem;
-        
+       
+        margin-top: 50px;
         @include flexbox{
 
             flex-direction: column;
@@ -55,6 +69,10 @@
         }
         
         &__author{
+
+            background: $neutralLighter;
+            padding: 2rem;
+            font-size: 1.2rem;
 
             @include flexbox{
 
@@ -72,11 +90,9 @@
                 }
             }
 
-            &__photo{
+            &__data{
 
-                margin-right: 2vw;
-                margin-top: 2rem;
-
+                margin-left: 2rem;
             }
         }
     }
@@ -87,7 +103,7 @@
 
     border-color: $themeDarker;
     border-style: solid;
-    border-width: 3px;
+    border-width: 0;
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
