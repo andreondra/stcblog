@@ -59,8 +59,8 @@
     }
 
     &__footer{
-       
-        margin-top: 50px;
+
+        margin-top: 40px;
         @include flexbox{
 
             flex-direction: column;
@@ -86,13 +86,26 @@
                 @include flexbox{
 
                     flex-direction: column;
-
                 }
             }
 
             &__data{
 
                 margin-left: 2rem;
+
+                @include for-size('tablet'){
+
+                    margin: 1rem 0 0 0;
+                    @include flexbox{
+                        flex-direction: column;
+                    };
+                }
+
+                &__name{
+
+                    color: $themePrimary;
+                    text-decoration: none;
+                }
             }
         }
     }

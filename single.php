@@ -18,8 +18,16 @@
                     <span class="post__header__meta__category"><?php echo the_category(' ,'); ?></span>
                     <span>•</span>
                     <span class="post__header__meta__readtime">Doba čtení: <?php echo reading_time(); ?></span>
-                    <span>•</span>
-                    <span class="post__header__meta__tags"><?php the_tags('',' ',''); ?></span>       
+                    <span>
+                        <?php
+                            if(get_the_tags() != ''){
+                                echo '•';
+                            }
+                        ?>
+                    </span>
+                    <span class="post__header__meta__tags">
+                        <?php the_tags('',' ',''); ?>
+                    </span>       
                 </div>
             </header> 
 

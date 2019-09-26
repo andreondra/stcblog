@@ -12,7 +12,28 @@
         <main class="main search">
             <header class="main__header">
                 <h1><?php echo get_bloginfo('name'); ?></h1>
-                <p>Výsledky vyhledávání pro: </p>
+                <p>
+                    <?php 
+                        $allsearch = new WP_Query("s=$s&showposts=0"); 
+                        $count = $allsearch ->found_posts;
+                        switch($count){
+                            case 0:
+                                echo 'Nebyl nalezen žádný výsledek pro: ';
+                                break;
+                            case 1:
+                                echo 'Nalezen 1 výsledek pro: ';
+                                break;
+                            case 2:
+                            case 3:
+                            case 4:
+                                echo 'Nalezeny ' . $count . ' výsledky pro: ';
+                                break;
+                            default:
+                                echo 'Nalezeno ' . $count . 'výsledků pro: ';
+                                break;
+                        }
+                    ?>
+                    <em><?php echo get_search_query(); ?></em></p>
             </header>
             <section class="feed__posts">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
