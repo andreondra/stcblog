@@ -19,8 +19,9 @@
 
         @include for-size('tablet'){
             &.hidden{
-
+                
                 @include flexbox{
+
                     justify-content: flex-end;
                 };
             }
@@ -43,7 +44,7 @@
                 display: none; 
             }
 
-            @include for-size('bp-down-500'){
+            @include for-size('tablet'){
 
                 &__std{
                     display: none; 
@@ -63,14 +64,33 @@
 
     &__forms{
 
-        @include flexbox;
+        @include flexbox{
+            flex-direction: row;
+        };
         
+        .searchForm{
+
+            margin-right: 1rem;
+        }
+
         &__menuButton{
 
-            &.active{
+            display: none;
+            cursor: pointer;
 
-                color: blue;
+            .ms-Icon{
+                
+                font-size: 1.5rem;
+                color: $white; 
             }
+        }
+
+        @include for-size('tablet'){
+            
+            &__menuButton{
+
+                display: block;
+            }         
         }
     }
 
@@ -84,6 +104,11 @@
             margin: 0;
             padding-left: 20px;
             list-style-type: none;
+            @include flexbox{
+
+                flex-direction: row;
+                align-items: flex-start;
+            }
 
             li{
 
@@ -103,6 +128,35 @@
                         transform: scale(1.1);   
                     }
                 }
+            }
+        }
+
+        @include for-size('tablet'){
+
+            @include flexbox{
+
+                justify-content: center;
+                align-items: flex-start;
+            }
+
+            max-height: 0;
+            overflow: hidden;
+            text-align: center;
+            transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+
+            ul{
+
+                padding: 0;
+                @include flexbox{
+
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+            &.active{
+
+                max-height: 100vh;
             }
         }
     }
