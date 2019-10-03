@@ -1,7 +1,16 @@
 $(document).ready(function(){
 
     searchForm();
+    menu();
 });
+
+function menu(){
+
+    $('#button_menu').on('click', function (){
+
+        $('#button_menu').toggleClass('active');
+    });
+}
 
 function searchForm(){
 

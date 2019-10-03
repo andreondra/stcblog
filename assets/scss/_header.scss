@@ -61,6 +61,19 @@
         }
     }
 
+    &__forms{
+
+        @include flexbox;
+        
+        &__menuButton{
+
+            &.active{
+
+                color: blue;
+            }
+        }
+    }
+
     &__nav{
 
         background: $themeDarker;
