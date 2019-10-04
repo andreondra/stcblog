@@ -23,19 +23,19 @@ function searchForm(){
 
         mouseenter: () => {
             $('#input_searchInput').addClass('active');
-            $('#section_header').addClass('hidden');
+            $('#logo_stclogo').addClass('hidden');
         },
 
         focuson: () => {
             $('#input_searchInput').addClass('active');
-            $('#section_header').addClass('hidden');
+            $('#logo_stclogo').addClass('hidden');
         },
 
         mouseleave: () => {
 
             if(!$('#input_searchInput').val() && !$('#input_searchInput').is(':focus')){
                 $('#input_searchInput').removeClass('active');
-                $('#section_header').removeClass('hidden');
+                $('#logo_stclogo').removeClass('hidden');
             } 
         },
 
@@ -43,7 +43,7 @@ function searchForm(){
 
             if(!$('#input_searchInput').val()){
                 $('#input_searchInput').removeClass('active');
-                $('#section_header').removeClass('hidden');
+                $('#logo_stclogo').removeClass('hidden');
             } 
         }
     });

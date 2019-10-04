@@ -8,24 +8,15 @@
         flex-direction: column;
     }
     
-    &__logo{ 
+    &__main{ 
  
         background: $themePrimary;
         height: 6rem;   
         width: 100%;
+
         @include flexbox{
-            justify-content: space-between;
+            justify-content: flex-end;
         };
-
-        @include for-size('tablet'){
-            &.hidden{
-                
-                @include flexbox{
-
-                    justify-content: flex-end;
-                };
-            }
-        }
 
         margin: 0;
         padding: 0 20px;
@@ -33,7 +24,9 @@
 
         &__stclogo{
 
+            width: 50%;
             height: 5rem;
+            transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
             &__std{
                 height: 100%;
                 display: block;
@@ -54,43 +47,72 @@
                     display: block;
                 }
             }
-        }
 
-        &__menu{
+            @include for-size('bp-down', 510px){
+                &.hidden{
 
-            color: $white;
-        }
-    }
-
-    &__forms{
-
-        @include flexbox{
-            flex-direction: row;
-        };
-        
-        .searchForm{
-
-            margin-right: 1rem;
-        }
-
-        &__menuButton{
-
-            display: none;
-            cursor: pointer;
-
-            .ms-Icon{
-                
-                font-size: 1.5rem;
-                color: $white; 
+                    opacity: 0;
+                }
             }
         }
 
-        @include for-size('tablet'){
-            
-            &__menuButton{
+        &__forms{
 
-                display: block;
-            }         
+            width: 50%;
+            margin-right: 1.5rem;
+
+            @include flexbox{
+                flex-direction: row;
+                justify-content: flex-end;
+            };
+            
+            .searchForm{
+    
+                margin-right: 1rem;
+            }
+    
+            &__menuButton{
+    
+                cursor: pointer;
+                height: 1.5rem;
+                position: relative;
+
+                .ms-Icon{
+
+                    position: absolute;
+                    top: 0;
+                    font-size: 1.5rem;
+                    color: $white; 
+                    opacity: 1;
+                    transition: opacity ease $ms-motion-duration-4;
+                }
+
+                .open{
+                    
+                    opacity: 0;
+                }
+
+                &.active{
+
+                    .closed{
+
+                        opacity: 0;
+                    }
+
+                    .open{
+
+                        opacity: 1;
+                    }
+                }
+            }
+    
+            @include for-size('tablet'){
+                
+                &__menuButton{
+    
+                    display: block;
+                }         
+            }
         }
     }
 

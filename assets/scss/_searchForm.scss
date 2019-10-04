@@ -39,6 +39,11 @@
 
             width: 300px;
             padding-right: 2.25rem;
+
+            @include for-size('bp-down', 380px){
+
+                width: 250px;
+            }
         }
     }
 }
