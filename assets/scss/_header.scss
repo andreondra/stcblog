@@ -59,7 +59,7 @@
         &__forms{
 
             width: 50%;
-            margin-right: 1.5rem;
+            margin-right: 0;
 
             @include flexbox{
                 flex-direction: row;
@@ -75,7 +75,8 @@
     
                 cursor: pointer;
                 height: 1.5rem;
-                position: relative;
+                position: relative; 
+                display: none;
 
                 .ms-Icon{
 
@@ -111,7 +112,9 @@
                 &__menuButton{
     
                     display: block;
-                }         
+                }      
+
+                margin-right: 1.5rem;;
             }
         }
     }
