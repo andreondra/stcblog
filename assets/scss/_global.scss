@@ -22,10 +22,16 @@ body{
     }
 }
 
+h1{
+
+    font-weight: normal;
+    color: $themePrimary;
+}
+
 .main{
 
     margin: 50px 0;
-    max-width: 1000px;
+    max-width: 768px;
 
     @include flexbox{
 
@@ -44,6 +50,8 @@ body{
         h1{
 
             color: $themePrimary;
+            font-size: 2.5rem;
+            font-weight: bold;
             margin: 0;
         }
 
@@ -69,43 +77,39 @@ body{
 p{
 
     font-size: 1.1rem;
+}
+
+p > a, article a{
+    color: $themeDark;
+    text-decoration: none;
+    position: relative;
+    //overflow: hidden;
+    display: inline-block;
+    height: 1em;
+    transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
     
-    a{
+    &:after{
+        content: "";
+        position: absolute;
+        bottom: -.1em;
+        width: 100%;
+        left: 0;
+        background: $themePrimary;
+        height: .1em;
+        width: 100%;
+        z-index: -1;
+        transition: $ms-motion-timing-decelerate $ms-motion-duration-4;         
+    }
+
+    &:visited{
         color: $themeDark;
-        text-decoration: none;
-        position: relative;
-        //overflow: hidden;
-        display: inline-block;
-        height: 1em;
-        transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
-        
+    }
+
+    &:hover{
+
+        color: $white;
         &:after{
-            content: "";
-            position: absolute;
-            bottom: -.1em;
-            width: 100%;
-            left: 0;
-            background: $themePrimary;
-            height: .1em;
-            width: 100%;
-            z-index: -1;
-            transition: $ms-motion-timing-decelerate $ms-motion-duration-4;         
-        }
-    
-        &:visited{
-            color: $themeDark;
-        }
-    
-        &:hover{
-    
-            color: $white;
-            &:after{
-                height: 100%;
-            }
-        }
-    
-        &:active{
-    
+            height: 100%;
         }
     }
 }

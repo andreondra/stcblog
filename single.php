@@ -10,7 +10,7 @@
         <?php get_header(); ?>
                
         <main class="main post">
-            <header class="post__header">
+            <header class="main__header post__header">
                 <h1><?php the_post(); the_title(); ?></h1>
                 <div class="post__header__meta">
                     <span class="post__header__meta__date"><?php echo get_the_date(); ?></span>
