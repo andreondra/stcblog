@@ -79,13 +79,12 @@ p{
     font-size: 1.1rem;
 }
 
-p > a, article a{
+p > a, /*article a*/{
     color: $themeDark;
     text-decoration: none;
     position: relative;
     //overflow: hidden;
     display: inline-block;
-    height: 1em;
     transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
     
     &:after{
