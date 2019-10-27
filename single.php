@@ -15,7 +15,7 @@
                 <div class="post__header__meta">
                     <span class="post__header__meta__date"><?php echo get_the_date(); ?></span>
                     <span>•</span>
-                    <span class="post__header__meta__category"><?php echo the_category(' ,'); ?></span>
+                    <span class="post__header__meta__category"><?php echo the_category(', '); ?></span>
                     <span>•</span>
                     <span class="post__header__meta__readtime">Doba čtení: <?php echo reading_time(); ?></span>
                     <span>

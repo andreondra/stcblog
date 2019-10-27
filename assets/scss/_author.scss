@@ -1,0 +1,36 @@
+// = author styles =
+// ===============================================
+
+.author{
+
+    
+
+    &__info{
+
+        &__photo{
+
+            @include flexbox{
+
+                flex-direction: column;
+
+            }
+        }
+        &__text{
+
+            @include flexbox{
+
+                flex-direction: column;
+            }
+
+            margin-bottom: 5rem;
+        }
+
+    }
+}
+h1{
+    @include flexbox{
+
+        flex-direction: column;
+        
+    }
+}
