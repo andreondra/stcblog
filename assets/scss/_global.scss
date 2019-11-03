@@ -79,13 +79,13 @@ p{
     font-size: 1.1rem;
 }
 
-p > a, /*article a*/{
+p > a /*article a*/{
     color: $themeDark;
     text-decoration: none;
     position: relative;
-    //overflow: hidden;
     display: inline-block;
     transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+    z-index: 0;
     
     &:after{
         content: "";
