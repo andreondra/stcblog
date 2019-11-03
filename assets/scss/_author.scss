@@ -26,10 +26,3 @@
 
     }
 }
-
-h1{
-    @include flexbox{
-
-        flex-direction: column;
-    }
-}
