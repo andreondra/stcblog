@@ -17940,14 +17940,122 @@ p > a:hover:after {
   margin-bottom: 0.5rem;
 }
 
+.post__content li a {
+  color: #005ba1;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  -webkit-transition: cubic-bezier(0.1, 0.9, 0.2, 1) 400ms;
+  transition: cubic-bezier(0.1, 0.9, 0.2, 1) 400ms;
+  z-index: 0;
+}
+
+.post__content li a:after {
+  content: "";
+  position: absolute;
+  bottom: -.1em;
+  width: 100%;
+  left: 0;
+  background: #0078d4;
+  height: .1em;
+  width: 100%;
+  z-index: -1;
+  -webkit-transition: cubic-bezier(0.1, 0.9, 0.2, 1) 400ms;
+  transition: cubic-bezier(0.1, 0.9, 0.2, 1) 400ms;
+}
+
+.post__content li a:visited {
+  color: #005ba1;
+}
+
+.post__content li a:hover {
+  color: #ffffff;
+}
+
+.post__content li a:hover:after {
+  height: 100%;
+}
+
 .post__content ul {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
+.post__content ul a {
+  color: #005ba1;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  -webkit-transition: cubic-bezier(0.1, 0.9, 0.2, 1) 400ms;
+  transition: cubic-bezier(0.1, 0.9, 0.2, 1) 400ms;
+  z-index: 0;
+}
+
+.post__content ul a:after {
+  content: "";
+  position: absolute;
+  bottom: -.1em;
+  width: 100%;
+  left: 0;
+  background: #0078d4;
+  height: .1em;
+  width: 100%;
+  z-index: -1;
+  -webkit-transition: cubic-bezier(0.1, 0.9, 0.2, 1) 400ms;
+  transition: cubic-bezier(0.1, 0.9, 0.2, 1) 400ms;
+}
+
+.post__content ul a:visited {
+  color: #005ba1;
+}
+
+.post__content ul a:hover {
+  color: #ffffff;
+}
+
+.post__content ul a:hover:after {
+  height: 100%;
+}
+
 .post__content ol {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.post__content ol a {
+  color: #005ba1;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  -webkit-transition: cubic-bezier(0.1, 0.9, 0.2, 1) 400ms;
+  transition: cubic-bezier(0.1, 0.9, 0.2, 1) 400ms;
+  z-index: 0;
+}
+
+.post__content ol a:after {
+  content: "";
+  position: absolute;
+  bottom: -.1em;
+  width: 100%;
+  left: 0;
+  background: #0078d4;
+  height: .1em;
+  width: 100%;
+  z-index: -1;
+  -webkit-transition: cubic-bezier(0.1, 0.9, 0.2, 1) 400ms;
+  transition: cubic-bezier(0.1, 0.9, 0.2, 1) 400ms;
+}
+
+.post__content ol a:visited {
+  color: #005ba1;
+}
+
+.post__content ol a:hover {
+  color: #ffffff;
+}
+
+.post__content ol a:hover:after {
+  height: 100%;
 }
 
 .post__content p {
