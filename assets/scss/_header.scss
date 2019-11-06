@@ -150,9 +150,54 @@
                     &:hover{
 
                         //background: $themePrimary;
-                        transform: scale(1.1);   
+                        transform: scale(1.1);
+                         
+                    }
+
+                }
+
+                ul{
+
+                    display: none;
+
+                    }
+                
+                &:hover{
+
+                    ul{
+                        
+                        margin: 0;
+                        padding-right: 15px;
+                        padding-left: 0;
+                        list-style-type: none;
+                        background-color: $white;
+                        position: absolute;
+                        top: auto;
+
+                        @include ms-motion-slideDownIn;
+                        transition: $ms-motion-duration-4;
+
+                        @include ms-depth-8;
+
+                        @include flexbox{
+
+                            flex-direction: column;
+                            align-items: flex-start;
+
+                        }
+                        
+                        li{
+
+                            a{
+
+                                color: $themeDarker;
+
+                            }
+                        }
+    
                     }
                 }
+
             }
         }
 
