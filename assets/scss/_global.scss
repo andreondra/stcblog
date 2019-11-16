@@ -41,7 +41,6 @@ h1,h2,h3,h4,h5,h6{
 
     &__header{
 
-        width: 50vw;
         @include flexbox{
 
             justify-content: top;
@@ -77,11 +76,10 @@ h1,h2,h3,h4,h5,h6{
 }
 
 p{
-
     font-size: 1.1rem;
 }
 
-p > a /*article a*/{
+a.effect{
     color: $themeDark;
     text-decoration: none;
     position: relative;
