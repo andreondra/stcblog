@@ -21,6 +21,9 @@
     @else if $size == 'tablet' {
         @media (max-width: 768px) { @content; }
     } 
+    @else if $size == 'desktop' {
+        @media (min-width: 769px) { @content; }
+    } 
 
     // natural breakpoints (project-specific)
     @else if $size == 'bp-down-500'{
