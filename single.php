@@ -13,21 +13,16 @@
             <header class="main__header post__header">
                 <h1><?php the_post(); the_title(); ?></h1>
                 <div class="post__header__meta">
-                    <span class="post__header__meta__date"><?php echo get_the_date(); ?></span>
-                    <span>•</span>
-                    <span class="post__header__meta__category"><?php echo the_category(', '); ?></span>
-                    <span>•</span>
-                    <span class="post__header__meta__readtime">Doba čtení: <?php echo reading_time(); ?></span>
-                    <span>
-                        <?php
-                            if(get_the_tags() != ''){
-                                echo '•';
-                            }
-                        ?>
-                    </span>
-                    <span class="post__header__meta__tags">
-                        <?php the_tags('',' ',''); ?>
-                    </span>       
+                    <div class="post__header__meta__date__group">
+                        <span class="post__header__meta__date"><?php echo get_the_date(); ?></span>
+                        <span>•</span>
+                        <span class="post__header__meta__category"><?php echo the_category(', '); ?></span>
+                    </div>
+                    <?php if(get_the_tags() != ''):?>
+                        <span class="post__header__meta__tags">
+                            <?php the_tags('',' ',''); ?>
+                        </span>  
+                    <?php endif;?>    
                 </div>
             </header> 
 

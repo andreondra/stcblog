@@ -21,9 +21,19 @@
 
         &__meta{
 
-             margin-top: 1rem;
+            margin-top: 1rem;
+            @include flexbox{
+                flex-direction: column;
+            };
 
-             &__category{
+            &__group{
+                
+                @include flexbox{
+                    flex-direction: row;
+                };
+            }
+
+            &__category{
 
                 a{
                     text-decoration: none;
@@ -52,6 +62,41 @@
 
         font-size: 1.1rem;
         line-height: 1.7rem;
+        margin-top: 1.5rem;
+
+        a {
+            color: $themeDark;
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+            transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+            z-index: 0;
+            
+            &:after{
+                content: "";
+                position: absolute;
+                bottom: -.1em;
+                width: 100%;
+                left: 0;
+                background: $themePrimary;
+                height: .1em;
+                width: 100%;
+                z-index: -1;
+                transition: $ms-motion-timing-decelerate $ms-motion-duration-4;         
+            }
+        
+            &:visited{
+                color: $themeDark;
+            }
+        
+            &:hover{
+        
+                color: $white;
+                &:after{
+                    height: 100%;
+                }
+            }
+        }
 
         pre{
 
@@ -63,125 +108,18 @@
 
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
-
-            
-
-            a {
-                color: $themeDark;
-                text-decoration: none;
-                position: relative;
-                display: inline-block;
-                transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
-                z-index: 0;
-                
-                &:after{
-                    content: "";
-                    position: absolute;
-                    bottom: -.1em;
-                    width: 100%;
-                    left: 0;
-                    background: $themePrimary;
-                    height: .1em;
-                    width: 100%;
-                    z-index: -1;
-                    transition: $ms-motion-timing-decelerate $ms-motion-duration-4;         
-                }
-            
-                &:visited{
-                    color: $themeDark;
-                }
-            
-                &:hover{
-            
-                    color: $white;
-                    &:after{
-                        height: 100%;
-                    }
-                }
-            }
-
         }
 
         ul{
 
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
-
-            a {
-                color: $themeDark;
-                text-decoration: none;
-                position: relative;
-                display: inline-block;
-                transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
-                z-index: 0;
-                
-                &:after{
-                    content: "";
-                    position: absolute;
-                    bottom: -.1em;
-                    width: 100%;
-                    left: 0;
-                    background: $themePrimary;
-                    height: .1em;
-                    width: 100%;
-                    z-index: -1;
-                    transition: $ms-motion-timing-decelerate $ms-motion-duration-4;         
-                }
-            
-                &:visited{
-                    color: $themeDark;
-                }
-            
-                &:hover{
-            
-                    color: $white;
-                    &:after{
-                        height: 100%;
-                    }
-                }
-            }
-
         }
 
         ol{
 
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
-
-            a {
-                color: $themeDark;
-                text-decoration: none;
-                position: relative;
-                display: inline-block;
-                transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
-                z-index: 0;
-                
-                &:after{
-                    content: "";
-                    position: absolute;
-                    bottom: -.1em;
-                    width: 100%;
-                    left: 0;
-                    background: $themePrimary;
-                    height: .1em;
-                    width: 100%;
-                    z-index: -1;
-                    transition: $ms-motion-timing-decelerate $ms-motion-duration-4;         
-                }
-            
-                &:visited{
-                    color: $themeDark;
-                }
-            
-                &:hover{
-            
-                    color: $white;
-                    &:after{
-                        height: 100%;
-                    }
-                }
-            }
-
         }
 
     }
