@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory')?>/style.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title><?php echo get_bloginfo('name'); ?></title>
+        <title><?php echo get_bloginfo('name'); ?> | Vyhledávání: <?php echo get_search_query(); ?></title>
         <?php wp_head(); ?>
     </head>
     <body class="ms-Fabric">

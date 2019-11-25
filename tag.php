@@ -3,7 +3,8 @@
     <head>
         <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory');?>/style.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title><?php echo get_bloginfo('name'); ?> | <?php single_cat_title(); ?></title>
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
+        <title><?php bloginfo('name'); ?> | #<?php single_tag_title(); ?></title>
         <?php wp_head(); ?>
     </head>
     <body class="ms-Fabric">
@@ -11,8 +12,7 @@
 
         <main class="main feed">
             <header class="main__header">
-                <h1><?php single_cat_title(); ?></h1>
-                <?php echo category_description(); ?>
+                <h1>#<?php single_tag_title(); ?></h1>
                 <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/mslogo.svg"/>
             </header>
             <section class="feed__posts">
