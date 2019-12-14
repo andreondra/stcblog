@@ -49,6 +49,7 @@
         //iOS placeholder fix
         @supports (-webkit-overflow-scrolling: touch) {
             font-size: 1rem;
+            border-radius: auto;
         }
     }
 }
