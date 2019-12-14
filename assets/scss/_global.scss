@@ -1,6 +1,7 @@
 // = global styles =
 // ===============================================
 
+
 *{
     box-sizing: border-box;
 }
@@ -32,7 +33,7 @@ h1,h2,h3,h4,h5,h6{
 .main{
 
     margin: 50px 0;
-    max-width: 768px;
+    max-width: 1000px;
 
     @include flexbox{
 
@@ -77,6 +78,11 @@ h1,h2,h3,h4,h5,h6{
 
 p{
     font-size: 1.1rem;
+}
+
+pre{
+    overflow-x: auto;
+    max-width: 768px;
 }
 
 a.effect{
