@@ -30,6 +30,12 @@ h1,h2,h3,h4,h5,h6{
     margin: 2rem 0 0 0;
 }
 
+div.syntaxhighlighter {
+    overflow-x: scroll !important;
+    overflow-y: auto;
+    width: 80vw !important;
+} 
+
 .main{
 
     margin: 50px 0;
@@ -41,7 +47,7 @@ h1,h2,h3,h4,h5,h6{
         flex-direction: column;
     };
 
-    &__header{
+    &__header{ 
 
         @include flexbox{
 
