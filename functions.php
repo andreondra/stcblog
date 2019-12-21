@@ -15,7 +15,7 @@ add_theme_support( 'post-thumbnails' );
 //set_post_thumbnail_size( 300, 200);
 
 function get_css_name(){
-    $version = 4;
+    $version = 3;
     return "/style.css?rnd=" . $version;
 }
 
