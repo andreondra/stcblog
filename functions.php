@@ -14,6 +14,11 @@ add_filter('the_content', 'remove_empty_p', 20, 1);
 add_theme_support( 'post-thumbnails' );
 //set_post_thumbnail_size( 300, 200);
 
+function get_css_name(){
+    $version = 3;
+    return "/style.css?rnd=" . $version;
+}
+
 /**
  * Create multiple socials icons. 
  * @param int Count of icons.
