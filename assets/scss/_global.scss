@@ -47,6 +47,10 @@ div.syntaxhighlighter {
         flex-direction: column;
     };
 
+    .error--404{
+        max-width: 80vw;
+    }
+
     &__header{ 
 
         @include flexbox{
