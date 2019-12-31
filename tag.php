@@ -13,7 +13,7 @@
         <main class="main feed">
             <header class="main__header">
                 <h1>#<?php single_tag_title(); ?></h1>
-                <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/mslogo.svg"/>
+                <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/mslogo.png"/>
             </header>
             <section class="feed__posts">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
