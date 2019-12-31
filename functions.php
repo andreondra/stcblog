@@ -10,10 +10,16 @@ function remove_empty_p( $content ) {
 	$content = preg_replace( '~\s?<p>(\s|&nbsp;)+</p>\s?~', '', $content );
 	return $content;
 }
-add_filter('the_content', 'remove_empty_p', 20, 1);
-add_theme_support( 'post-thumbnails' );
-//set_post_thumbnail_size( 300, 200);
 
+//Attach filter to the contents of articles.
+add_filter('the_content', 'remove_empty_p', 0, 1);
+//Allow post thumbnails.
+add_theme_support( 'post-thumbnails' );
+
+/**
+ * Attach a version suffix to the url of the style.css to force browsers to refresh CSS.
+ * @author Ondrej Golasowski
+ */
 function get_css_name(){
     $version = 3;
     return "/style.css?rnd=" . $version;
@@ -54,6 +60,7 @@ function stcblog_add_socials($count, $customizer){
     }
 }
 
+//Adding functions to the Customizer.
 function stcblog_customize_register($wp_customize){
 
     // ***********************************
@@ -86,11 +93,18 @@ function stcblog_customize_register($wp_customize){
 }
 add_action('customize_register', 'stcblog_customize_register');
 
+/**
+ * Calculates reading time according to the article word count.
+ * @return int Reading time.
+ * @author Ondrej Golasowski
+ */
 function reading_time() {
+    //Get contents of the current article.
     $content = get_post_field( 'post_content', $post->ID );
     $word_count = str_word_count( strip_tags( $content ) );
     $readingtime = ceil($word_count / 200);
 
+    //Chooses correct word for specified interval.
     switch($readingtime){
         case 1:
             $timer = " minuta";
