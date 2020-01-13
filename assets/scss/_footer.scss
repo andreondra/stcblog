@@ -32,7 +32,16 @@
 
         @include for-size('bp-down-500'){
         
-            margin-top: 15px;
+            margin-top: 1rem;
+            flex-direction: column;
+
+            .delimiter{
+                display: none;
+            }
+
+            a{
+                margin-top: .5rem;
+            }
         }
 
         .delimiter{
