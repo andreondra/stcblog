@@ -44,7 +44,7 @@ function stcblog_add_socials($count, $customizer){
         ]);
 
         //Adding an image upload control to the Customizer.
-        $customizer->add_control(new WP_Customize_Image_Control($customizer, 'settings_footer_logo' . $id, [
+        $customizer->add_control(new WP_Customize_Image_Control($customizer, 'control_footer_logo' . $id, [
             'label' => __('Socials ' . $id . ' - logo', 'stcblog'),
             'section' => 'section_footer',
             'settings' => 'settings_footer_logo' . $id
@@ -58,6 +58,37 @@ function stcblog_add_socials($count, $customizer){
             'type' => 'url'
         ]));
     }
+}
+
+/**
+ * Add GDPR link to footer.
+ * @author Ondrej Golasowski
+ */
+function stcblog_add_gdpr($customizer){
+
+        // Adding a template setting for a text.
+        $customizer->add_setting('settings_footer_gdpr_text', [
+            'default' => ''
+        ]);
+        // Adding a template setting for a link.
+        $customizer->add_setting('settings_footer_gdpr_link', [
+            'default' => ''
+        ]);
+
+        //Adding an text input upload control to the Customizer.
+        $customizer->add_control(new WP_Customize_Control($customizer, 'control_footer_gdpr_text', [
+            'label' => __('GDPR text', 'stcblog'),
+            'section' => 'section_footer',
+            'settings' => 'settings_footer_gdpr_text'
+        ]));
+
+        //Adding an url input control to the Customizer.
+        $customizer->add_control(new WP_Customize_Control($customizer, 'control_footer_gdpr_link', [
+            'label' => __('GDPR link', 'stcblog' ),
+            'section' => 'section_footer',
+            'settings' => 'settings_footer_gdpr_link',
+            'type' => 'url'
+        ]));
 }
 
 //Adding functions to the Customizer.
@@ -76,7 +107,7 @@ function stcblog_customize_register($wp_customize){
         // ===================================
         // Adding the template setting.
         $wp_customize->add_setting('settings_footer_copyright', [
-            'default' => '© 2019 STC, Všechna práva vyhrazena'
+            'default' => '© 2020 STC, Všechna práva vyhrazena'
         ]);
 
         //Adding a control to the Customizer.
@@ -85,6 +116,11 @@ function stcblog_customize_register($wp_customize){
             'section' => 'section_footer',
             'settings' => 'settings_footer_copyright'
         ]));
+
+        // ===================================
+        // Custom GDPR link
+        // ===================================
+        stcblog_add_gdpr($wp_customize);
 
         // ===================================
         // Custom socials icons

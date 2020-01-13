@@ -1,5 +1,11 @@
 <footer class="footer">
-    <section class="footer__copyright"><?php echo get_theme_mod('settings_footer_copyright', '');?></section>
+    <section class="footer__info">
+        <?php echo get_theme_mod('settings_footer_copyright', '');?>
+        <?php if(get_theme_mod('settings_footer_gdpr_text', '') != "" && get_theme_mod('settings_footer_gdpr_link', '') != "") :?>
+            <p class="delimiter">·</p>
+            <a href="<?php echo get_theme_mod('settings_footer_gdpr_link', '');?>"><?php echo get_theme_mod('settings_footer_gdpr_text', '');?></a>
+        <?php endif; ?>
+    </section>
     <section class="footer__socials">
         <?php if(esc_url(get_theme_mod('settings_footer_logo1')) != "") :  ?>
             <a class="footer__socials__icon" href=<?php echo esc_url(get_theme_mod('settings_footer_link1'))?>><img src=<?php echo esc_url(get_theme_mod('settings_footer_logo1'))?> alt=""/></a>

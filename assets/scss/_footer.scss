@@ -23,13 +23,24 @@
         }
     }
 
-    &__copyright{
+    &__info{
 
+        @include flexbox{
+            flex-direction: row;
+        };
         color: $neutralDark;
 
         @include for-size('bp-down-500'){
         
             margin-top: 15px;
+        }
+
+        .delimiter{
+            margin: 0 1rem; 
+        }
+
+        a{
+            color: $neutralDark;
         }
     }  
 
