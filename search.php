@@ -29,7 +29,7 @@
                                 echo 'Nalezeny ' . $count . ' výsledky pro: ';
                                 break;
                             default:
-                                echo 'Nalezeno ' . $count . 'výsledků pro: ';
+                                echo 'Nalezeno ' . $count . ' výsledků pro: ';
                                 break;
                         }
                     ?>
