@@ -4,7 +4,12 @@
 @font-face{
 
     font-family: logos;
-    src: url(assets/fonts/fondos.woff);
+    src: url('assets/fonts/fondos.eot');
+    src:  url('assets/fonts/fondos.eot?v9p4ax');
+    src:  url('assets/fonts/fondos.eot?v9p4ax#iefix') format('embedded-opentype'),
+        url('assets/fonts/fondos.ttf?v9p4ax') format('truetype'),
+        url('assets/fonts/fondos.woff?v9p4ax') format('woff'),
+        url('assets/fonts/fondos.svg?v9p4ax#fondos') format('svg');
 }
 
 .author{
@@ -63,35 +68,41 @@
                     }
                 }
                 
-                #linkedlinked:hover{
+                #linked:hover{
 
                     color: #0e76a8;
                 }
-                #instainsta:hover{
+                #insta:hover{
 
                     color: #fd5949;
                 }
-                #fbfb:hover{
+                #fb:hover{
 
                     color: #3b5998;
                 }
-                #urlurl:hover{
+                #url:hover{
 
+<<<<<<< HEAD
+                    color: $themeDark;
+                }
+                #soundclound:hover{
+=======
                     color: var(--themeDark);
                 } 
                 #soundcloundsoundclound:hover{
+>>>>>>> 7fb8db882acb2d6d46d0a6dcb420da8b3441478e
 
                     color: #ff7700;
                 }
-                #twittertwitter:hover{
+                #twitter:hover{
 
                     color: #00acee;
                 }
-                #youtubeyoutube:hover{
+                #youtube:hover{
 
                     color: #c4302b;
                 }
-                #wikipediawikipedia:hover{
+                #wikipedia:hover{
 
                     color: #3D393A;
                 }
