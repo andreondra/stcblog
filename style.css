@@ -18283,7 +18283,9 @@ a.effect:hover:after {
 
 @font-face {
   font-family: logos;
-  src: url(assets/fonts/fondos.woff);
+  src: url("assets/fonts/fondos.eot");
+  src: url("assets/fonts/fondos.eot?v9p4ax");
+  src: url("assets/fonts/fondos.eot?v9p4ax#iefix") format("embedded-opentype"), url("assets/fonts/fondos.ttf?v9p4ax") format("truetype"), url("assets/fonts/fondos.woff?v9p4ax") format("woff"), url("assets/fonts/fondos.svg?v9p4ax#fondos") format("svg");
 }
 
 .author__info {
@@ -18355,35 +18357,35 @@ a.effect:hover:after {
   color: #494847;
 }
 
-.author__info__text__soc #linkedlinked:hover {
+.author__info__text__soc #linked:hover {
   color: #0e76a8;
 }
 
-.author__info__text__soc #instainsta:hover {
+.author__info__text__soc #insta:hover {
   color: #fd5949;
 }
 
-.author__info__text__soc #fbfb:hover {
+.author__info__text__soc #fb:hover {
   color: #3b5998;
 }
 
-.author__info__text__soc #urlurl:hover {
+.author__info__text__soc #url:hover {
   color: #005ba1;
 }
 
-.author__info__text__soc #soundcloundsoundclound:hover {
+.author__info__text__soc #soundclound:hover {
   color: #ff7700;
 }
 
-.author__info__text__soc #twittertwitter:hover {
+.author__info__text__soc #twitter:hover {
   color: #00acee;
 }
 
-.author__info__text__soc #youtubeyoutube:hover {
+.author__info__text__soc #youtube:hover {
   color: #c4302b;
 }
 
-.author__info__text__soc #wikipediawikipedia:hover {
+.author__info__text__soc #wikipedia:hover {
   color: #3D393A;
 }
 /*# sourceMappingURL=style.css.map */

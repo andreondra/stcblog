@@ -20,28 +20,28 @@
                     <?php endif; ?>
                     <div class="author__info__text__soc">
                         <?php if(!(empty(get_the_author_meta('linkedin')))):?>
-                            <a id="linkedlinked" target="_blank" href="<?php echo get_the_author_meta( 'linkedin', $post->post_author);?>">&#xeac9;</a>
+                            <a id="linked" target="_blank" href="<?php echo get_the_author_meta( 'linkedin', $post->post_author);?>">&#xeac9;</a>
                         <?php endif; ?>
                         <?php if(!(empty(get_the_author_meta('instagram')))):?>
-                            <a id="instainsta" target="_blank" href="<?php echo get_the_author_meta( 'instagram', $post->post_author);?>">&#xea92;</a>
+                            <a id="insta" target="_blank" href="<?php echo get_the_author_meta( 'instagram', $post->post_author);?>">&#xea92;</a>
                         <?php endif; ?>
                         <?php if(!(empty(get_the_author_meta('facebook')))):?>
-                            <a id="fbfb" target="_blank" href="<?php echo get_the_author_meta( 'facebook', $post->post_author);?>">&#xea91;</a>
+                            <a id="fb" target="_blank" href="<?php echo get_the_author_meta( 'facebook', $post->post_author);?>">&#xea91;</a>
                         <?php endif; ?>
                         <?php if(!(empty(get_the_author_meta('url')))):?>
-                            <a id="urlurl" target="_blank" href="<?php echo get_the_author_meta( 'url', $post->post_author);?>">&#xe9c9;</a>
+                            <a id="url" target="_blank" href="<?php echo get_the_author_meta( 'url', $post->post_author);?>">&#xe9c9;</a>
                         <?php endif; ?>
                         <?php if(!(empty(get_the_author_meta('soundclound')))):?>
-                            <a id="soundcloundsoundclound" target="_blank" href="<?php echo get_the_author_meta( 'soundclound', $post->post_author);?>">&#xeac3;</a>
+                            <a id="soundclound" target="_blank" href="<?php echo get_the_author_meta( 'soundclound', $post->post_author);?>">&#xeac3;</a>
                         <?php endif; ?>
                         <?php if(!(empty(get_the_author_meta('twitter')))):?>
-                            <a id="twittertwitter" target="_blank" href="https://twitter.com/<?php echo get_the_author_meta( 'twitter', $post->post_author);?>">&#xea96;</a>
+                            <a id="twitter" target="_blank" href="https://twitter.com/<?php echo get_the_author_meta( 'twitter', $post->post_author);?>">&#xea96;</a>
                         <?php endif; ?>
                         <?php if(!(empty(get_the_author_meta('youtube')))):?>
-                            <a id="youtubeyoutube" target="_blank" href="<?php echo get_the_author_meta( 'youtube', $post->post_author);?>">&#xea9d;</a>
+                            <a id="youtube" target="_blank" href="<?php echo get_the_author_meta( 'youtube', $post->post_author);?>">&#xea9d;</a>
                         <?php endif; ?>
                         <?php if(!(empty(get_the_author_meta('wikipedia')))):?>
-                            <a id="wikipediawikipedia" target="_blank" href="<?php echo get_the_author_meta( 'wikipedia', $post->post_author);?>">&#xeac8;</a>
+                            <a id="wikipedia" target="_blank" href="<?php echo get_the_author_meta( 'wikipedia', $post->post_author);?>">&#xeac8;</a>
                         <?php endif; ?>
                     </div>
                 </div>
