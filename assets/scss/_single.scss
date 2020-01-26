@@ -101,6 +101,24 @@
             margin-bottom: 0.5rem;
         }
 
+        .wp-block-button{
+
+            transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+            
+            a{
+                text-decoration: none;
+                color: white;
+            }
+
+            &__link{
+                background: var(--themePrimary);
+            }
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
     }
 
     &__footer{
