@@ -26,11 +26,15 @@
                 };
             }
 
+            &__date{
+                color: var(--black);
+            }
+
             &__category{
 
                 a{
                     text-decoration: none;
-                    color: $themePrimary;
+                    color: var(--themePrimary);
                 }
             }
 
@@ -42,7 +46,7 @@
                 a{
 
                     text-decoration: none;
-                    color: $themePrimary;
+                    color: var(--themePrimary);
                     
                     &:before{
                         content: "#";
@@ -59,23 +63,23 @@
         margin-top: 1.5rem;
 
         a {
-            color: $themeDark;
+            color: var(--themeDark);
             text-decoration: underline;
             transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
         
             &:visited{
-                color: $themeDark;
+                color: var(--themeDark);
             }
         
             &:hover{
         
-                color: $themeTertiary;
+                color: var(--themeTertiary);
             }
         }
 
         pre{
 
-            background-color: $neutralLighter;
+            background-color: var(--neutralLighter);
 
         }
 
@@ -111,7 +115,7 @@
         
         &__author{
 
-            background: $neutralLighter;
+            background: var(--neutralLight);
             padding: 2rem;
             font-size: 1.2rem;
 
@@ -144,7 +148,7 @@
 
                 &__name{
 
-                    color: $themePrimary;
+                    color: var(--themePrimary);
                     text-decoration: none;
                 }
             }
@@ -155,7 +159,7 @@
 
 .avatar{
 
-    border-color: $themeDarker;
+    border-color: var(--themeDarker);
     border-style: solid;
     border-width: 0;
     border-radius: 50%;

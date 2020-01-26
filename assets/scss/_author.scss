@@ -7,21 +7,21 @@
 
     &__info{
 
-        background: $neutralLighter;
+        background: var(--neutralLight);
         padding: 2rem;
 
         a {
-            color: $themeDark;
+            color: var(--themeDark);
             text-decoration: underline;
             transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
         
             &:visited{
-                color: $themeDark;
+                color: var(--themeDark);
             }
         
             &:hover{
         
-                color: $themeTertiary;
+                color: var(--themeTertiary);
             }
         }
 

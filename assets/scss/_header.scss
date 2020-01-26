@@ -10,7 +10,7 @@
     
     &__main{ 
  
-        background: $themePrimary;
+        background: var(--themePrimary);
         height: 6rem;   
         width: 100%;
 
@@ -83,7 +83,7 @@
                     position: absolute;
                     top: 0;
                     font-size: 1.5rem;
-                    color: $white; 
+                    color: var(--white); 
                     opacity: 1;
                     transition: opacity ease $ms-motion-duration-4;
                 }
@@ -121,7 +121,7 @@
 
     &__nav{
 
-        background: $themeDarker;
+        background: var(--themeDarker);
         width: 100%;
 
         ul{
@@ -141,7 +141,7 @@
 
                     display: inline-block;
                     padding: 1rem;
-                    color: $white;
+                    color: var(--themeLighterAlt);
                     text-decoration: none;
                     font-size: 1.5rem;
                     @include ms-motion-scaleDownIn;
@@ -149,7 +149,7 @@
 
                     &:hover{
 
-                        //background: $themePrimary;
+                        //background: var(--themePrimary);
                         transform: scale(1.1);
                          
                     }
@@ -160,7 +160,7 @@
 
                     display: none;
                     @include for-size('tablet'){
-                        background: $themeDark;
+                        background: var(--themeDark);
                         width: 100vw;
                         display: flex;
 
@@ -180,7 +180,7 @@
                             padding-right: 15px;
                             padding-left: 0;
                             list-style-type: none;
-                            background-color: $white;
+                            background-color: var(--white);
                             position: absolute;
                             top: auto;
     
@@ -198,7 +198,7 @@
                             
                             li{
                                 a{
-                                    color: $themeDarker;
+                                    color: var(--themeDarker);
                                     font-size: 1.2rem;
                                 }
                             }
