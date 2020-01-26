@@ -7,7 +7,7 @@
     width: 100%;
     height: 60px;
     padding: 0 20px;
-    background: $neutralLight;
+    background: var(--neutralLight);
     @include flexbox{
         justify-content: space-between;
     };
@@ -28,7 +28,7 @@
         @include flexbox{
             flex-direction: row;
         };
-        color: $neutralDark;
+        color: var(--neutralDark);
 
         @include for-size('bp-down-500'){
         
@@ -45,11 +45,12 @@
         }
 
         .delimiter{
+            color: var(--neutralDark);
             margin: 0 1rem; 
         }
 
         a{
-            color: $neutralDark;
+            color: var(--neutralDark);
         }
     }  
 

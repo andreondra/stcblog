@@ -18,21 +18,21 @@
 
     &__info{
 
-        background: $neutralLighter;
+        background: var(--neutralLight);
         padding: 2rem;
 
         a {
-            color: $themeDark;
+            color: var(--themeDark);
             text-decoration: underline;
             transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
         
             &:visited{
-                color: $themeDark;
+                color: var(--themeDark);
             }
         
             &:hover{
         
-                color: $themeTertiary;
+                color: var(--themeTertiary);
             }
         }
 
@@ -59,12 +59,12 @@
 
                 a{
 
-                    color: $black;
+                    color: var(--black);
                     text-decoration: none;
 
                     &:visited{
 
-                        color: $black;
+                        color: var(--black);
                     }
                 }
                 
@@ -82,9 +82,15 @@
                 }
                 #url:hover{
 
+<<<<<<< HEAD
                     color: $themeDark;
                 }
                 #soundclound:hover{
+=======
+                    color: var(--themeDark);
+                } 
+                #soundcloundsoundclound:hover{
+>>>>>>> 7fb8db882acb2d6d46d0a6dcb420da8b3441478e
 
                     color: #ff7700;
                 }

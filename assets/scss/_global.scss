@@ -14,6 +14,7 @@ html{
 
 body{
 
+    background-color: var(--white);
     min-height: 100%;
     @include flexbox{
 
@@ -26,7 +27,7 @@ body{
 h1,h2,h3,h4,h5,h6{
 
     font-weight: normal;
-    color: $themePrimary;
+    color: var(--themePrimary);
     margin: 2rem 0 0 0;
 }
 
@@ -61,13 +62,13 @@ div.syntaxhighlighter {
 
         h1{
 
-            color: $themePrimary;
+            color: var(--themePrimary);
             font-size: 2.5rem;
             font-weight: bold;
             margin: 0;
             text-align: center;
         }
-
+ 
         p{
 
             margin: 2rem 0 0 0;
@@ -97,6 +98,7 @@ div.syntaxhighlighter {
 
 p{
     font-size: 1.1rem;
+    color: var(--black);
 }
 
 pre{
@@ -106,7 +108,7 @@ pre{
 
 //Deprecated.
 a.effect{
-    color: $themeDark;
+    color: var(--themeDark);
     text-decoration: none;
     position: relative;
     display: inline-block;
@@ -119,7 +121,7 @@ a.effect{
         bottom: -.1em;
         width: 100%;
         left: 0;
-        background: $themePrimary;
+        background: var(--themePrimary);
         height: .1em;
         width: 100%;
         z-index: -1;
@@ -127,12 +129,12 @@ a.effect{
     }
 
     &:visited{
-        color: $themeDark;
+        color: var(--themeDark);
     }
 
     &:hover{
 
-        color: $white;
+        color: var(--white);
         &:after{
             height: 100%;
         }
