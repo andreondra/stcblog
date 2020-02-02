@@ -17758,7 +17758,8 @@ a.effect:hover:after {
 
 @media (max-width: 500px) {
   .footer {
-    min-height: 100px;
+    min-height: 200px;
+    height: auto;
     padding: 20px;
     display: -webkit-box;
     display: -ms-flexbox;

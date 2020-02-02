@@ -14,7 +14,8 @@
 
     @include for-size('bp-down-500'){
 
-        min-height: 100px;
+        min-height: 200px;
+        height: auto;
         padding: 20px;
 
         @include flexbox{
