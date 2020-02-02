@@ -21,7 +21,7 @@ add_theme_support( 'post-thumbnails' );
  * @author Ondrej Golasowski
  */
 function get_css_name(){
-    $version = 8;
+    $version = 9;
     return "/style.css?rnd=" . $version;
 }
 
@@ -91,6 +91,26 @@ function stcblog_add_gdpr($customizer){
         ]));
 }
 
+/**
+ * Add MarCom mail to footer.
+ * @author Petr Kučera
+ */
+function stcblog_add_MarCommail($customizer){
+
+    //Adding a template setting for a MarCom mail.
+    $customizer->add_setting('settings_footer_MarCommail', [
+        'default' => ''
+    ]);
+
+    //Adding an text input upload control to the Customizer.
+    $customizer->add_control(new WP_Customize_Control($customizer, 'settings_footer_MarCommail', [
+        'label' => __('MarCom mail', 'stcblog'),
+        'section' => 'section_footer',
+        'description'=> 'Contact email for MarCom AG.',
+        'settings' => 'settings_footer_MarCommail'
+    ]));
+}
+
 //Adding functions to the Customizer.
 function stcblog_customize_register($wp_customize){
 
@@ -121,6 +141,11 @@ function stcblog_customize_register($wp_customize){
         // Custom GDPR link
         // ===================================
         stcblog_add_gdpr($wp_customize);
+
+        // ===================================
+        // Custom MarCom mail
+        // ===================================
+        stcblog_add_MarCommail($wp_customize);
 
         // ===================================
         // Custom socials icons
@@ -160,6 +185,10 @@ function reading_time() {
     return $totalreadingtime;
 }
 
+/**
+ * Exporting posts to csv file
+ * @author Petr Kučera
+ */
 add_action( 'manage_posts_extra_tablenav', 'admin_post_list_top_export_button', 20, 1 );
 function admin_post_list_top_export_button( $which ) {
     global $typenow;

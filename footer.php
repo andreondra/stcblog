@@ -5,6 +5,10 @@
             <p class="delimiter">·</p>
             <a href="<?php echo get_theme_mod('settings_footer_gdpr_link', '');?>"><?php echo get_theme_mod('settings_footer_gdpr_text', '');?></a>
         <?php endif; ?>
+        <?php if(get_theme_mod('settings_footer_MarCommail', '') != "") :?>
+            <p class="delimiter">·</p>
+            <a href="mailto:<?php echo get_theme_mod('settings_footer_MarCommail', '');?>"><?php echo get_theme_mod('settings_footer_MarCommail', '');?></a>
+        <?php endif; ?>
     </section>
     <section class="footer__socials">
         <?php if(esc_url(get_theme_mod('settings_footer_logo1')) != "") :  ?>

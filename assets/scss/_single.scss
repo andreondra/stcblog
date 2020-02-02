@@ -169,6 +169,11 @@
                     color: var(--themePrimary);
                     text-decoration: none;
                 }
+                
+                &__description{
+
+                    max-width: 400px;
+                }
             }
         }
     }
