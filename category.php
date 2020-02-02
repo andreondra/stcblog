@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory') . get_css_name();?>"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title><?php echo get_bloginfo('name'); ?> | <?php single_cat_title(); ?></title>
+        <title><?php single_cat_title(); ?> | <?php echo get_bloginfo('name'); ?></title>
         <?php wp_head(); ?>
     </head>
     <body class="ms-Fabric">

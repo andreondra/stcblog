@@ -18398,6 +18398,10 @@ a.effect:hover:after {
   flex-direction: column;
 }
 
+.author__info__text__description {
+  text-align: center;
+}
+
 .author__info__text__soc {
   font-family: logos;
   font-size: 1.2rem;
