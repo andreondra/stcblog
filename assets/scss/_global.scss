@@ -90,12 +90,9 @@ div.syntaxhighlighter {
 
     .wp-post-image{
 
-        img{
-
-            @include for-size('tablet'){
-                max-width: 100%;
-                height: auto;
-            }
+        @include for-size('tablet'){
+            max-width: 100%;
+            height: auto;
         }
     }
 }
@@ -144,5 +141,14 @@ a.effect{
         }
     }
 }
+.wp-post-image{
 
+    img{
+
+        @include for-size('tablet'){
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
 
