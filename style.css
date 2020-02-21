@@ -18086,6 +18086,7 @@ a.effect:hover:after {
 .post__header__meta__tags {
   margin-top: .5rem;
   white-space: wrap;
+  text-align: center;
 }
 
 .post__header__meta__tags a {
