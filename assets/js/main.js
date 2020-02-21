@@ -2,6 +2,7 @@ $(document).ready(function(){
 
     searchForm();
     menu();
+    removeImageAttr();
 });
 
 function menu(){
@@ -47,4 +48,8 @@ function searchForm(){
             } 
         }
     });
+}
+//editing none responsive setting at wordpress
+function removeImageAttr(){
+    $('img').removeAttr('width').removeAttr('height');
 }

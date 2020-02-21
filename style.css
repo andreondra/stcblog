@@ -17445,13 +17445,6 @@ a.effect:hover:after {
   height: 100%;
 }
 
-@media (max-width: 768px) {
-  .wp-post-image img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
 .header {
   width: 100%;
   display: -webkit-box;

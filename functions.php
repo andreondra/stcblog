@@ -21,7 +21,7 @@ add_theme_support( 'post-thumbnails' );
  * @author Ondrej Golasowski
  */
 function get_css_name(){
-    $version = 14;
+    $version = 15;
     return "/style.css?rnd=" . $version;
 }
 
@@ -230,5 +230,4 @@ function func_export_all_posts() {
         }
     }
 }
-
 ?>
