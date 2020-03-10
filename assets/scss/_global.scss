@@ -38,6 +38,14 @@ div.syntaxhighlighter {
     max-width: 1000px; 
 } 
 
+iframe{
+    max-width: 100%;
+}
+
+.wp-block-embed.wp-block-embed-wordpress{
+    margin: 0;
+}
+
 .main{
 
     margin: 50px 0;
