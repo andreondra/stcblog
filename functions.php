@@ -21,7 +21,7 @@ add_theme_support( 'post-thumbnails' );
  * @author Ondrej Golasowski
  */
 function get_css_name(){
-    $version = 17;
+    $version = 18;
     return "/style.css?rnd=" . $version;
 }
 

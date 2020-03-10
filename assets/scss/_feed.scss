@@ -64,6 +64,10 @@
         
                     color: var(--themePrimary);
                     margin: 0;
+
+                    @include for-size('tablet'){
+                        text-align: center;
+                    }
                 }
         
                 p{
