@@ -67,6 +67,7 @@
             color: var(--themeDark);
             text-decoration: underline;
             transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+            word-break: break-word;
         
             &:visited{
                 color: var(--themeDark);
