@@ -21,7 +21,7 @@ add_theme_support( 'post-thumbnails' );
  * @author Ondrej Golasowski
  */
 function get_css_name(){
-    $version = 20;
+    $version = 21;
     return "/style.css?rnd=" . $version;
 }
 
@@ -230,4 +230,17 @@ function func_export_all_posts() {
         }
     }
 }
+/**
+ * Remove core update notifications for common users
+ * @author Petr Kučera 
+ */
+function show_updated_only_to_admins()
+{
+    if (!current_user_can('update_core')) {
+        remove_action( 'admin_notices', 'update_nag', 3 );
+remove_action( 'network_admin_notices', 'update_nag', 3 );
+    }
+}
+add_action( 'admin_head', 'show_updated_only_to_admins', 1 );
+
 ?>
