@@ -85,6 +85,11 @@
                     margin-top: 1rem;
                     font-weight: normal;
                     font-size: 0.9rem;
+
+                    &:hover{
+                        
+                        color: var(--black);
+                    }
                     @include flexbox{
                         justify-content: flex-start;
                     };

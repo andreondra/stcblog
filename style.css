@@ -18001,6 +18001,10 @@ a.effect:hover:after {
           justify-content: flex-start;
 }
 
+.feed__posts .excerpt__text__meta:hover {
+  color: var(--black);
+}
+
 .feed__posts .excerpt__text__meta span {
   margin-right: 1rem;
 }
