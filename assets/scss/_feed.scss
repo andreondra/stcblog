@@ -64,6 +64,7 @@
         
                     color: var(--themePrimary);
                     margin: 0;
+                    font-weight: normal;
 
                     @include for-size('tablet'){
                         text-align: center;
@@ -71,12 +72,18 @@
                 }
         
                 p{
-                    margin: 1rem 0 0 0; 
+                    margin: 1rem 0 0 0;
+                    font-size: 1.1rem;
+                    color: var(--black);
+                    font-weight: normal;
+                    line-height: 1.3rem; 
                 }
 
                 &__meta{
         
                     margin-top: 1rem;
+                    font-weight: normal;
+                    font-size: 0.9rem;
                     @include flexbox{
                         justify-content: flex-start;
                     };
