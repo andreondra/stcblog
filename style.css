@@ -17962,6 +17962,7 @@ a.effect:hover:after {
   color: var(--themePrimary);
   margin: 0;
   font-weight: normal;
+  text-transform: none;
 }
 
 @media (max-width: 768px) {
