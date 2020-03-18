@@ -38,7 +38,8 @@
                         <p class="post__footer__author__data__description"><?php the_author_meta('description'); ?> </p>
                     </div>
                 </section>
-            </footer>  
+            </footer>
+            <?php related_posts();?>  
         </main>
 
         <?php get_footer(); ?>
