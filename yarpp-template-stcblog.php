@@ -1,8 +1,8 @@
 <?php
-/*
-YARPP Template: STC blog
-Author: Petr Kučera
-Description: style of STC blog related post.
+/** 
+    YARPP Template: STC blog
+    @author: Petr Kučera
+    @description: style of STC blog related post.
 */
 ?>
 <h2>Doporučené články</h2>

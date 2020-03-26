@@ -49,6 +49,68 @@ iframe{
 .wp-block-embed.wp-block-embed-wordpress{
     margin: 0;
 }
+ 
+#ez-toc-container{
+
+    //border: 1px solid var(--themeDark);
+    @include ms-depth-16;
+    padding: 1rem;
+    user-select: none;
+
+    .ez-toc-title-container{
+
+        @include flexbox{
+            justify-content: space-between;
+        };
+
+        .ez-toc-title{
+            color: var(--themeDark);
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .ez-toc-title-toggle{
+
+            a{
+                @include flexbox;
+                text-decoration: none;
+                cursor: pointer;
+
+                i{
+                    font-size: 2rem;                    
+                }
+            }
+        }
+    }
+
+    nav{
+
+        ul{
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 1rem;
+
+            a{
+                text-decoration: none;
+
+                &:hover{
+                    color: var(--themeDark);
+                    text-decoration: underline;
+                }
+
+                &::before{
+                    content: counters(item,".") ". ";
+                    counter-increment: item;
+                }
+            }
+        }
+
+        >ul{
+            padding: 0;
+        }
+    }
+}
 
 .main{
 

@@ -3,6 +3,7 @@ $(document).ready(function(){
     searchForm();
     menu();
     removeImageAttr();
+    addTOCIcon();
 });
 
 function menu(){
@@ -49,7 +50,17 @@ function searchForm(){
         }
     });
 }
-//editing none responsive setting at wordpress
+
+/**
+ * @description Remove fixed img dimensions attributes.
+ */
 function removeImageAttr(){
-    $('img').removeAttr('width').removeAttr('height');
+    $('img').removeAttr('width height');
+}
+
+/**
+ * @description Add MS icon to the Easy TOC plugin's TOC.
+ */
+function addTOCIcon(){
+    $('.ez-toc-icon-toggle').addClass('ms-Icon ms-Icon--ContextMenu');
 }
