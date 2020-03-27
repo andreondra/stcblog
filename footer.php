@@ -24,4 +24,4 @@
 </footer>
 <?php wp_footer(); ?>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/jquery.min.js"></script>
-<script src="<?php echo get_bloginfo('template_directory');?>/assets/js/main.js"></script>
+<script src="<?php echo get_bloginfo('template_directory') . get_js_name();?>"></script>

@@ -26,6 +26,15 @@ function get_css_name(){
 }
 
 /**
+ * Attach a version suffix to the url of the main.js to force browsers to refresh JS.
+ * @author Ondrej Golasowski
+ */
+function get_js_name(){
+    $version = 2;
+    return "/assets/js/main.js?rnd=" . $version;
+}
+
+/**
  * Create multiple socials icons. 
  * @param int Count of icons.
  * @author Ondrej Golasowski
