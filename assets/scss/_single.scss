@@ -31,16 +31,20 @@
 
         @include for-size('tablet'){
 
-            bottom: 2rem;
+            bottom: 1.5rem;
 
             &.show{
-                right: 2rem;
+                right: 1.5rem;
             }
         }
 
-        i{
+        i{ 
             color: var(--white);
             font-size: 2rem;
+
+            @include for-size('tablet'){
+                font-size: 1.5rem;
+            }
         }
     }
 
