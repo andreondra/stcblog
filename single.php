@@ -10,6 +10,11 @@
         <?php get_header(); ?>
                
         <main class="main post">
+
+            <a id="backTop" onclick="goTop()">
+                <i class="ms-Icon ms-Icon--ChevronUp"></i>
+            </a>
+
             <header class="main__header post__header">
                 <h1><?php the_post(); the_title(); ?></h1>
                 <div class="post__header__meta">

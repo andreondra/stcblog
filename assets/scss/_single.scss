@@ -10,6 +10,40 @@
         flex-direction: column;
     };
 
+    #backTop{
+
+        cursor: pointer;
+        position: fixed;
+        bottom: 4rem;
+        right: -4rem;
+        background: var(--themePrimary);
+        opacity: .5;
+        padding: .5rem;
+        transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+
+        &:hover{
+            opacity: 1;
+        }
+
+        &.show{
+            right: 4rem;
+        }
+
+        @include for-size('tablet'){
+
+            bottom: 2rem;
+
+            &.show{
+                right: 2rem;
+            }
+        }
+
+        i{
+            color: var(--white);
+            font-size: 2rem;
+        }
+    }
+
     &__header{
 
         &__meta{

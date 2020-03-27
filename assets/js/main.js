@@ -4,7 +4,24 @@ $(document).ready(function(){
     menu();
     removeImageAttr();
     addTOCIcon();
+    window.onscroll = function() {backTopButton()};
 });
+
+function backTopButton(){
+
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+        $('#backTop').addClass("show");
+    } else {
+        $('#backTop').removeClass("show");
+    }
+}
+
+function goTop(){
+    if (document.body.scrollTop !== 0 || document.documentElement.scrollTop !== 0) {
+        window.scrollBy(0, -Math.max(1, Math.floor((document.body.scrollTop || document.documentElement.scrollTop) / 10)));
+        requestAnimationFrame(goTop);
+    }
+}
 
 function menu(){
 
