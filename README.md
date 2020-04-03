@@ -8,7 +8,7 @@ Celá šablona je přizpůsobena nejen požadavkům programu, ale i grafickému 
 Vychází se z knihovny Fabric UI. Další popis šablony je k dispozici v publikované maturitní práci.
 
 ## Licence
-Projekt je po obhajobě maturitní práce uvolněn pod licencí MIT.
+Projekt je po obhajobě maturitní práce uvolněn pod licencí GNU GPLv3 a vyšší.
 
 ## Změny ve Fabric UI 
 Edited _Animation.Mixins.scss so that @mixin ms-motion-scaleDownIn doensn't retain state - set to none.
