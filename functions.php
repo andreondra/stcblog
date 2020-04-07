@@ -252,4 +252,16 @@ remove_action( 'network_admin_notices', 'update_nag', 3 );
 }
 add_action( 'admin_head', 'show_updated_only_to_admins', 1 );
 
+/**
+ * Add multiple authors
+ * using Co-Author Plus plugin
+ * @author Petr Kučera
+ */
+
+if ( function_exists( 'coauthors_posts_links' ) ) {
+    coauthors_posts_links();
+} else {
+    the_author_posts_link();
+}
+
 ?>
