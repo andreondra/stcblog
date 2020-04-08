@@ -265,16 +265,14 @@ if ( function_exists( 'coauthors_posts_links' ) ) {
 }
 
 /**
- * Diseable login wordpres
+ * Diseable login wordpress
  * @author Petr Kučera
  */
 
-function wpse208677_authenticate($user,$username,$pass) {
-    remove_filter('authenticate','wp_authenticate_username_password',20,3);
-    return null;
-    // if you want to whitelist your ip check for it and return $user
-}
-  
-add_filter('authenticate','wpse208677_authenticate', 10,3);
+remove_filter( 'authenticate', 'wp_authenticate_email_password', 20 );
+remove_filter( 'authenticate', 'wp_authenticate', 20 );
+remove_filter( 'authenticate', 'wp_authenticate_cookie', 20 );
+remove_filter( 'authenticate', 'wp_authenticate_spam_check', 20 );
+remove_filter( 'authenticate', 'wp_authenticate_username_password', 20 ); 
 
 ?>
