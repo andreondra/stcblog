@@ -264,4 +264,23 @@ if ( function_exists( 'coauthors_posts_links' ) ) {
     the_author_posts_link();
 }
 
+/**
+ * Diseable login wordpres
+ * @author Petr Kučera
+ */
+
+function wpse208677_authenticate($user,$username,$pass) {
+    remove_filter('authenticate','wp_authenticate_username_password',20,3);
+    return null;
+    // if you want to whitelist your ip check for it and return $user
+  }
+  
+  add_filter('authenticate','wpse208677_authenticate', 10,3)
+
+  add_action( 'login_init', function () {
+    if ( isset( $_POST['log'] ) || isset( $_POST['user_login'] ) ) {
+       die;
+    }
+ } );
+
 ?>
