@@ -264,15 +264,4 @@ if ( function_exists( 'coauthors_posts_links' ) ) {
     the_author_posts_link();
 }
 
-/**
- * Diseable login wordpress
- * @author Petr Kučera
- */
-
-remove_filter( 'authenticate', 'wp_authenticate_email_password', 20 );
-remove_filter( 'authenticate', 'wp_authenticate', 20 );
-remove_filter( 'authenticate', 'wp_authenticate_cookie', 20 );
-remove_filter( 'authenticate', 'wp_authenticate_spam_check', 20 );
-remove_filter( 'authenticate', 'wp_authenticate_username_password', 20 ); 
-
 ?>

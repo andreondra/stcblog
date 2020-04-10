@@ -217,3 +217,23 @@ a.effect{
     }
 }
 
+//securtiy login into wordpress
+#login{
+
+    h1{
+
+        display: none;
+    }
+    #login_error{
+
+        display: none;
+    }
+    #loginform{
+
+        display: none;
+    }
+    #nav{
+
+        display: none;
+    }
+}
