@@ -163,59 +163,52 @@
 
     &__footer{
 
-        margin-top: 40px;
         @include flexbox{
 
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: space-around;
+            flex-wrap: wrap;
             align-items: flex-start;
+        };
 
-        }
-        
         &__author{
 
-            background: var(--neutralLight);
+            max-width: 350px;
+            margin: 2rem;
             padding: 2rem;
-            font-size: 1.2rem;
+
+            background: var(--neutralLight);
 
             @include flexbox{
 
-                flex-direction: row;
-                align-items: flex-start;
+                flex-direction: column;
 
             }
 
             @include for-size('tablet'){
 
-                @include flexbox{
-
-                    flex-direction: column;
-                }
+                max-width: auto;
+                margin-left: 0;
+                margin-right: 0;
             }
 
             &__data{
 
-                margin-left: 2rem;
+                @include flexbox{
 
-                @include for-size('tablet'){
-
-                    margin: 1rem 0 0 0;
-                    @include flexbox{
-                        flex-direction: column;
-                    };
+                    flex-direction: column;
                 }
 
                 &__name{
 
-                    color: var(--themePrimary);
                     text-decoration: none;
+                    color: var(--themePrimary);
                 }
-                
-                &__description{
 
-                    max-width: 400px;
-                }
             }
         }
+
     }
 }
 

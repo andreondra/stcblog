@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Remove empty paragraphs created by wpautop()
  * @author Ryan Hamilton
@@ -21,7 +21,7 @@ add_theme_support( 'post-thumbnails' );
  * @author Ondrej Golasowski
  */
 function get_css_name(){
-    $version = 26; 
+    $version = 27;
     return "/style.css?rnd=" . $version;
 }
 
@@ -251,5 +251,17 @@ remove_action( 'network_admin_notices', 'update_nag', 3 );
     }
 }
 add_action( 'admin_head', 'show_updated_only_to_admins', 1 );
+
+/**
+ * Add multiple authors
+ * using Co-Author Plus plugin
+ * @author Petr Kučera
+ */
+
+if ( function_exists( 'coauthors_posts_links' ) ) {
+    coauthors_posts_links();
+} else {
+    the_author_posts_link();
+}
 
 ?>

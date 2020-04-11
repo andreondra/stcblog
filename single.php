@@ -34,15 +34,8 @@
             <article class="post__content">
                 <?php the_content(); ?>
             </article>
-
             <footer class="post__footer">
-                <section class="post__footer__author">
-                    <div class="post__footer__author__photo"><?php echo get_avatar( get_the_author_meta( 'ID' )); ?></div>
-                    <div class="post__footer__author__data">
-                        <a rel="author" class="post__footer__author__data__name" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author_meta('display_name'); ?></a>
-                        <p class="post__footer__author__data__description"><?php the_author_meta('description'); ?> </p>
-                    </div>
-                </section>
+                <?php include 'biography.php';?>
             </footer>
             <?php related_posts();?>  
         </main>
