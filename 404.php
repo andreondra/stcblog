@@ -11,7 +11,7 @@
         <main class="main">
             <header class="main__header">
                 <h1>Jejda!</h1>
-                <p>Někde se stala chyba. Tým kočiček na vyřešení problému už usilovně pracuje. Mezitím se koukni na <a class="effect" href="<?php echo esc_url( home_url( '/' ) ); ?>">hlavní stránku</a>, nebo zkus něco vyhledat.</p>
+                <p>Někde se stala chyba. Tým kočiček na vyřešení problému už usilovně pracuje. Mezitím se koukněte na <a class="effect" href="<?php echo esc_url( home_url( '/' ) ); ?>">hlavní stránku</a>, nebo zkuste něco vyhledat.</p>
             </header>
             <img class="error--404" src="<?php echo get_theme_file_uri( 'assets/img/cat.svg'); ?>"/>
         </main>

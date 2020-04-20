@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Remove empty paragraphs created by wpautop()
  * @author Ryan Hamilton
@@ -198,6 +198,7 @@ function reading_time() {
  * Exporting posts to csv file
  * @author Petr Kučera
  */
+/*
 add_action( 'manage_posts_extra_tablenav', 'admin_post_list_top_export_button', 20, 1 );
 function admin_post_list_top_export_button( $which ) {
     global $typenow;
@@ -239,6 +240,7 @@ function func_export_all_posts() {
         }
     }
 }
+*/
 /**
  * Remove core update notifications for common users
  * @author Petr Kučera 
@@ -264,4 +266,8 @@ if ( function_exists( 'coauthors_posts_links' ) ) {
     the_author_posts_link();
 }
 
-?>
+/**
+ * Desible admin bar on website, becouse cashing
+ * @author Petr Kucera, Matyas Koc
+ */
+show_admin_bar(false);
