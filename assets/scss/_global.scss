@@ -217,3 +217,11 @@ a.effect{
     }
 }
 
+// Youtube viedeo
+.wp-block-embed__wrapper{
+
+    @include flexbox{
+
+        flex-direction: column;
+    };
+}
