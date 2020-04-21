@@ -177,6 +177,7 @@
             max-width: 350px;
             margin: 2rem;
             padding: 2rem;
+            min-height: 500px;
 
             background: var(--neutralLight);
 
@@ -191,6 +192,7 @@
                 max-width: auto;
                 margin-left: 0;
                 margin-right: 0;
+                min-height: auto;
             }
 
             &__data{
