@@ -278,13 +278,14 @@ show_admin_bar(false);
  */
 remove_action('wp_head', 'wp_generator');
 remove_action ('wp_head', 'rsd_link');
-remove_action('wp_head', 'wlwmanifest_link');
 
 // Disable REST API link tag
 if(is_user_logged_in()){
     add_action('wp_head', 'rest_output_link_wp_head', 10);
+    add_action('wp_head', 'wlwmanifest_link');
 }else{
     remove_action('wp_head', 'rest_output_link_wp_head', 10);
+    remove_action('wp_head', 'wlwmanifest_link');
 }
 
 ?>
