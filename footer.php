@@ -11,6 +11,7 @@
         <?php endif; ?>
     </section>
     <section class="footer__socials">
+        <a style="display: none;" href="<?php echo esc_url( home_url( '/stc.php' ) ); ?>">tv</a>
         <?php if(esc_url(get_theme_mod('settings_footer_logo1')) != "") :  ?>
             <a class="footer__socials__icon" href=<?php echo esc_url(get_theme_mod('settings_footer_link1'))?>><img src=<?php echo esc_url(get_theme_mod('settings_footer_logo1'))?> alt=""/></a>
         <?php endif; ?>

@@ -15,6 +15,9 @@
                 <h1><?php echo get_bloginfo('name'); ?></h1>
                 <p><?php echo get_bloginfo('description'); ?></p>
                 <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/mslogo.png"/>
+                <div style="display: none;">
+                    <a href="<?php echo esc_url( home_url( '/stc.php' ) ); ?>">tv</a>
+                </div>
             </header>
             <section class="feed__posts">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
