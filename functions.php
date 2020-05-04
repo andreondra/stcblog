@@ -279,5 +279,7 @@ show_admin_bar(false);
 remove_action('wp_head', 'wp_generator');
 remove_action ('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
+// Disable REST API link tag
+remove_action('wp_head', 'rest_output_link_wp_head', 10);
 
 ?>
