@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Remove empty paragraphs created by wpautop()
  * @author Ryan Hamilton
@@ -271,3 +271,13 @@ if ( function_exists( 'coauthors_posts_links' ) ) {
  * @author Petr Kucera, Matyas Koc
  */
 show_admin_bar(false);
+
+/**
+ * Remove info about wordpress for better security
+ * @author Petr Kucera, Matyas Koc
+ */
+remove_action('wp_head', 'wp_generator');
+remove_action ('wp_head', 'rsd_link');
+add_filter('xmlrpc_enabled', '__return_false');
+
+?>
