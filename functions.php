@@ -281,7 +281,7 @@ remove_action ('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
 
 // Show wp REST API only for register users
-add_filter( 'rest_authentication_errors', function( $result ) {
+/*add_filter( 'rest_authentication_errors', function( $result ) {
     if ( ! empty( $result ) ) {
       return $result;
     }
@@ -289,6 +289,6 @@ add_filter( 'rest_authentication_errors', function( $result ) {
       return new WP_Error( 'rest_not_logged_in', 'You are not currently logged in.', array( 'status' => 401 ) );
     }
     return $result;
-});
+});*/
 
 ?>
