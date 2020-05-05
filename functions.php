@@ -278,14 +278,17 @@ show_admin_bar(false);
  */
 remove_action('wp_head', 'wp_generator');
 remove_action ('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
 
-// Disable REST API link tag
-if(is_user_logged_in()){
-    add_action('wp_head', 'rest_output_link_wp_head', 10);
-    add_action('wp_head', 'wlwmanifest_link');
-}else{
-    remove_action('wp_head', 'rest_output_link_wp_head', 10);
-    remove_action('wp_head', 'wlwmanifest_link');
-}
+// Show wp REST API only for register users
+add_filter( 'rest_authentication_errors', function( $result ) {
+    if ( ! empty( $result ) ) {
+      return $result;
+    }
+    if ( ! is_user_logged_in() ) {
+      return new WP_Error( 'rest_not_logged_in', 'You are not currently logged in.', array( 'status' => 401 ) );
+    }
+    return $result;
+});
 
 ?>
