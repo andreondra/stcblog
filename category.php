@@ -8,7 +8,7 @@
     </head>
     <body class="ms-Fabric">
         <?php get_header(); ?>
-        <?php include 'cloud.php'?>
+        <canvas id="canvas"></canvas>
         <main class="main feed">
             <header class="main__header">
                 <h1><?php single_cat_title(); ?></h1>

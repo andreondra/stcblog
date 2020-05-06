@@ -26,6 +26,7 @@
 <?php include 'cookies-notice.php';?>
 <?php wp_footer(); ?>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/jquery.min.js"></script>
+<script src="<?php echo get_bloginfo('template_directory');?>/assets/js/canvas.js"></script>
 <script src="<?php echo get_bloginfo('template_directory') . get_js_name();?>"></script>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/cookies-enabler.min.js"></script>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/cookies-setting.js"></script>
