@@ -1,3 +1,4 @@
+<!--
 <div id="background-wrap">
     <div class="x1">
         <div class="cloud"></div>
@@ -11,3 +12,4 @@
         <div class="cloud"></div>
     </div>
 </div>
+-->
