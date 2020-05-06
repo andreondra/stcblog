@@ -9,4 +9,9 @@
     position: fixed;
     display: block;
     z-index: -1;
+
+    @include for-size('tablet'){
+
+        display: none;
+    }
 }

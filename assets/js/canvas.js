@@ -11,7 +11,7 @@ const opts = {
 	particleColor: "rgb(250,250,250)",
 	lineColor: "rgb(234,234,234)",
 	particleAmount: 90,
-	defaultSpeed: 0.5,
+	defaultSpeed: 0.1,
 	variantSpeed: 1,
 	defaultRadius: 3,
 	variantRadius: 4,
