@@ -4,6 +4,8 @@
 
 .post{ 
 
+    background-color: var(--white);
+
     @include flexbox{
 
         width: 80vw;   
@@ -256,4 +258,30 @@ figcaption{
     text-align: center;
     color: var(--neutralDark);
     font-size: 1rem;
+}
+
+.wp-block-quote{
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    padding-left: 2rem;
+    color: var(--neutralDark);
+
+    border-left: 2px solid var(--neutralTertiaryAlt);
+
+    p{
+
+        color: var(--neutralDark);
+    }
+
+    @include for-size('tablet'){
+
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        border: none;
+    }
 }

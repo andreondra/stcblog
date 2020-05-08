@@ -9,7 +9,6 @@
     </head>
     <body class="ms-Fabric">
         <?php get_header(); ?>
-        <canvas id="canvas"></canvas>
         <main class="main feed">
             <header class="main__header">
                 <h1><?php echo get_bloginfo('name'); ?></h1>

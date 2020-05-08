@@ -24,6 +24,7 @@
     </section>
 </footer>
 <?php include 'cookies-notice.php';?>
+<canvas id="canvas"></canvas>
 <?php wp_footer(); ?>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/jquery.min.js"></script>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/canvas.js"></script>
