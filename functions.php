@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Remove empty paragraphs created by wpautop()
  * @author Ryan Hamilton
