@@ -93,12 +93,44 @@
                     }
                     @include flexbox{
                         justify-content: flex-start;
+                        flex-wrap: wrap;
+                    };
+                    @include for-size('tablet'){
+
+                        @include flexbox{
+
+                            justify-content: center;
+                        };
                     };
                     span{
             
                         margin-right: 1rem;
                     }
+
                 }
+            
+                // style of tags in loop
+                &__tag{
+
+                    font-size: 0.9rem;
+                    font-weight: normal;
+                    background-color: var(--neutralLight);
+                    padding: 0.5rem;
+                    padding-top: 0.3rem;
+                    padding-bottom: 0.3rem;
+                    border-radius: 0.2rem;
+
+                    @include for-size('tablet'){
+
+                        margin-top: 0.5rem;
+                    };
+
+                }
+                #vzorova-hodina{
+
+                    background-color: var(--msftyellow);
+                }
+                // end of style of tags in loop
                 
             }
         

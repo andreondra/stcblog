@@ -225,3 +225,12 @@ a.effect{
         flex-direction: column;
     };
 }
+
+//phone hide
+#phone-hide{
+
+    @include for-size('tablet'){
+
+        display: none;
+    }
+}
