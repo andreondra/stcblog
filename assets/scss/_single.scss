@@ -289,3 +289,24 @@ figcaption{
         border: none;
     }
 }
+
+// style of file for download
+.wp-block-file{
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    @include flexbox{
+
+        flex-direction: column-reverse;
+    };
+
+    &__button{
+
+        transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
