@@ -23,7 +23,7 @@ COOKIES_ENABLER.init({
     cookieDuration: '365',
     wildcardDomain: false,
 
-    iframesPlaceholder: true,
+    iframesPlaceholder: false,
     iframesPlaceholderHTML:
         '<p>To view this content you need to'
             +'<a href="#" class="ce-accept">Enable Cookies</a>'

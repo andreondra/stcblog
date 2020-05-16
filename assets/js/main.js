@@ -6,6 +6,7 @@ $(document).ready(function(){
     addTOCIcon();
     window.onscroll = function() {backTopButton()};
     cookiesSetting();
+    makeIframeVisible();
     
 });
 
