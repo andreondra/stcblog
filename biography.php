@@ -2,7 +2,8 @@
 /**
  * Add biography into single
  * Using Co-authors plugin
- * @author Petr Kučera
+ * @copyright Copyright (C) 2020 Petr Kucera
+ * @license GPL(GPLv3)
  */
 
 if(function_exists('coauthors_posts_links')){

@@ -1,3 +1,11 @@
+<?php
+/**
+ * Header.
+ * @copyright Copyright (C) 2020 Ondrej Golasowski, Petr Kucera
+ * @license GPL(GPLv3)
+ */
+?>
+
 <header class="header ms-depth-8">
     <section class="header__main" id="section_header">
         <a class="header__main__stclogo" id="logo_stclogo" href="<?php echo esc_url( home_url( '/' ) ); ?>">

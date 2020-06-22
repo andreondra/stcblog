@@ -1,8 +1,10 @@
 /**
- * Background canvas
- * @author Petr Kucera
+ * Background canvas animation.
+ * @author Dudley Storey
+ * @link http://thenewcode.com/1159/Create-a-Dynamic-Point-Mesh-Animation-with-HTML5-Canvas
  */
 
+ 
 let resizeReset = function() {
 	w = canvasBody.width = window.innerWidth;
 	h = canvasBody.height = window.innerHeight;

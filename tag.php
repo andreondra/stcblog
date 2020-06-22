@@ -1,3 +1,11 @@
+<?php
+/**
+ * Tag page.
+ * @copyright Copyright (C) 2020 Ondrej Golasowski, Petr Kucera
+ * @license GPL(GPLv3)
+ */
+?>
+
 <!DOCTYPE html>
 <html>
     <head>

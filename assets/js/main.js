@@ -1,3 +1,12 @@
+/**
+ * Main script file.
+ * @copyright Copyright (C) 2020 Ondrej Golasowski, Petr Kucera
+ * @license GPL(GPLv3)
+ */
+
+ /**
+  * Load functions when page is fully loaded.
+  */
 $(document).ready(function(){
 
     searchForm();

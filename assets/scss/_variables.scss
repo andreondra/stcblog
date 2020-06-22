@@ -1,10 +1,10 @@
 // = variables =
+// Copyright (C) 2020 Ondrej Golasowski
 // ===============================================
   
 :root{
 
-    // colors
-    // ===============================================
+    // colors based on Fabric UI palette
     --themePrimary: #0078d4;
     --themeLighterAlt: #f3f9fd;
     --themeLighter: #d0e7f8;
@@ -30,6 +30,7 @@
     --cloud: #f4f4f4;
     --msftyellow: #fdb900;
 
+    // dark theme
     @media (prefers-color-scheme: dark){
 
         //--black: #ffffff;

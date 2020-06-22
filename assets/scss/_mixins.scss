@@ -1,4 +1,5 @@
 // = mixins =
+// Copyright (C) 2020 Ondrej Golasowski
 // ===============================================
 
 
@@ -11,11 +12,7 @@
         @media (min-width: 720px) { @content; }
     } @else if $size == 'fhd-up' {
         @media (min-width: 1080px) { @content; }
-    } @else if $size == 'qhd-up' {
-        @media (min-width: 1440px) { @content; }
-    } @else if $size == 'uhd-up' {
-        @media (min-width: 2160px) { @content; }
-    } 
+    }
 
     // by devices
     @else if $size == 'tablet' {
@@ -39,7 +36,7 @@
     @else if $size == 'bp-down'{
         @media (max-width: $width) { @content; }
     }
-  }
+  } 
 
   @mixin flexbox($align: center, $justify: center, $direction: row){
     

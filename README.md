@@ -7,7 +7,7 @@ The theme was created as a graduation thesis of Andrew Golasowski. It is release
 
 ## About project
 Whole theme respects individual requirements of the Microsoft STC and the Microsoft Fluent Design System.
-The project is dependent on Fabric UI styles. 
+The project depends on Fabric UI styles. 
 
 ## Features
 ### Responsive

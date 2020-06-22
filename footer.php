@@ -1,3 +1,11 @@
+<?php
+/**
+ * Footer.
+ * @copyright Copyright (C) 2020 Ondrej Golasowski, Petr Kucera
+ * @license GPL(GPLv3)
+ */
+?>
+
 <footer class="footer">
     <section class="footer__info">
         <?php echo get_theme_mod('settings_footer_copyright', '');?>
