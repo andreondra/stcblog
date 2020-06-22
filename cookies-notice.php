@@ -1,3 +1,11 @@
+<?php
+/**
+ * Cookies notice template.
+ * @copyright Copyright (C) 2020 Petr Kucera
+ * @license GPL(GPLv3)
+ */
+?>
+
 <script id="ce-banner-html" type="text/plain">
     <div class="cookies-notice">
         <p>Tato webová stránka využívá soubory cookies.</p>

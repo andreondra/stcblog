@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * description
+ * @copyright Copyright (C) 2020 Petr Kucera
+ * @license GPL(GPLv3)
+ */
 ?>
 <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory') . get_css_name();?>"/>
 	<div <?php post_class( 'wp-embed' ); ?>>

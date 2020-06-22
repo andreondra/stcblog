@@ -1,3 +1,11 @@
+<?php
+/**
+ * description
+ * @copyright Copyright (C) 2020 Petr Kucera
+ * @license GPL(GPLv3)
+ */
+?>
+
 <!--
 <div id="background-wrap">
     <div class="x1">
