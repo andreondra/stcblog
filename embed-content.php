@@ -1,6 +1,6 @@
 <?php
 /**
- * description
+ * Embedded article template.
  * @copyright Copyright (C) 2020 Petr Kucera
  * @license GPL(GPLv3)
  */
