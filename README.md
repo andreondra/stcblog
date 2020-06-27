@@ -1,8 +1,7 @@
-[![Build status](https://dev.azure.com/OndrejGolasowski/stcblog/_apis/build/status/stcblog-CI)](https://dev.azure.com/OndrejGolasowski/stcblog/_build/latest?definitionId=2)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # STCblog Wordpress theme
-Simple original Wordpress theme designed for Microsoft Student Trainee Center project [studuj.digital](https://studuj.digital/).
+Simple original Wordpress theme designed for Microsoft Student Trainee Center project [studuj.digital](https://studuj.digital/). See current version [here](https://github.com/MicrosoftSTC/stcblog).
 The theme was created as a graduation thesis of Andrew Golasowski. It is released as open-source to provide a learning tool for students not only at [SPS Karvina](http://spskarvina.cz/).
 
 ## About project
