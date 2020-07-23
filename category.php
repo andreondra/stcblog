@@ -5,7 +5,6 @@
  * @license GPL(GPLv3)
  */
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>

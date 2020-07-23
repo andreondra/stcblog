@@ -1,12 +1,11 @@
-<?php 
+<?php
+
 /**
  * Special PHP functions.
  * @copyright Copyright (C) 2020 Ondrej Golasowski, Petr Kucera and contributors
  * @license GPL(GPLv3)
  */
-?>
 
-<?php
 /**
  * Remove empty paragraphs created by wpautop()
  * @author Ryan Hamilton

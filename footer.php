@@ -5,7 +5,6 @@
  * @license GPL(GPLv3)
  */
 ?>
-
 <footer class="footer">
     <section class="footer__info">
         <?php echo get_theme_mod('settings_footer_copyright', '');?>

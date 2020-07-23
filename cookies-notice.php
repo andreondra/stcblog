@@ -5,7 +5,6 @@
  * @license GPL(GPLv3)
  */
 ?>
-
 <script id="ce-banner-html" type="text/plain">
     <div class="cookies-notice">
         <p>Tato webová stránka využívá soubory cookies.</p>
