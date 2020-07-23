@@ -1,4 +1,4 @@
-<?php
+<?php 
 /**
  * Special PHP functions.
  * @copyright Copyright (C) 2020 Ondrej Golasowski, Petr Kucera and contributors
