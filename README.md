@@ -17,12 +17,12 @@ Based on [STCblog template](https://github.com/andreondra/stcblog).
 ### Animated search bar
 ![](docs/img/readme3.gif)
 
-### Support for [Easy Table of Contents](https://cs.wordpress.org/plugins/easy-table-of-contents/)
+### Support for [Easy Table of Contents](https://wordpress.org/plugins/easy-table-of-contents/)
 ![](docs/img/readme4.gif)
 
 ## License and copyright
 Project is licensed under GNU GPLv3.
-(C) Ondrej Golasowski, Petr Kucera and contributors.
+(C) Ondrej Golasowski, Petr Kucera and [contributors](https://github.com/MicrosoftSTC/stcblog/graphs/contributors).
 
 ## Fabric UI changes
 Edited _Animation.Mixins.scss - @mixin ms-motion-scaleDownIn doesn't retain state - set to none.
