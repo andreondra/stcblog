@@ -2,55 +2,49 @@
 // Copyright (C) 2020 Ondrej Golasowski
 // ===============================================
 
-.searchForm{
+.searchForm {
+  @include flexbox;
+  position: relative;
 
+  &__button {
+    cursor: pointer;
     @include flexbox;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    z-index: 150;
+    font-size: 1.5rem;
+    color: var(--themePrimary);
+  }
 
-    &__button{
+  &__input {
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 140;
+    height: 2rem;
+    width: 8rem;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    outline: none;
+    border-radius: 2px;
+    border: 0;
+    transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
 
-        cursor: pointer;
-        @include flexbox;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 2rem;
-        height: 2rem;
-        z-index: 150;
-        font-size: 1.5rem;
-        color: var(--themePrimary);
+    &.active {
+      width: 300px;
+      padding-right: 2.25rem;
+
+      @include for-size("bp-down", 380px) {
+        width: 250px;
+      }
     }
 
-    &__input{
-
-        overflow: hidden;
-        box-sizing: border-box;
-        z-index: 140;
-        height: 2rem;
-        width: 8rem;
-        padding-left: 10px;
-        font-size: 1.5rem;
-        outline: none;
-        border-radius: 2px;
-        border: 0;
-        transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
-
-        &.active{ 
-
-            width: 300px;
-            padding-right: 2.25rem;
-
-            @include for-size('bp-down', 380px){
-
-                width: 250px;
-            }
-        }
-
-        //iOS placeholder fix
-        @supports (-webkit-overflow-scrolling: touch) {
-            font-size: 1.25rem;
-            border-radius: auto;
-        }
+    //iOS placeholder fix
+    @supports (-webkit-overflow-scrolling: touch) {
+      font-size: 1.25rem;
+      border-radius: auto;
     }
+  }
 }
-

@@ -2,62 +2,52 @@
 // Copyright (C) 2020 Petr Kucera
 // ===============================
 
-.wp-embed{
+.wp-embed {
+  border: none;
+  margin: 1rem;
 
-    border: none;
-    margin: 1rem;
+  @include ms-depth-4;
 
-    @include ms-depth-4;
-    
-    @include ms-motion-scaleDownIn;
-    transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+  @include ms-motion-scaleDownIn;
+  transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
 
-    &:hover{
-        
-        cursor: pointer;
-        transform: scale(1.025);   
-        @include ms-depth-16;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+    @include ms-depth-16;
+  }
+
+  h2 {
+    margin-top: 0.5rem;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
     }
+  }
 
-    h2{
+  img {
+    width: 100%;
+    height: auto;
+  }
 
-        margin-top: 0.5rem;
-    }
+  article {
+    width: 100%;
 
-    a{
+    a {
+      @include flexbox {
+        justify-content: flex-start;
+        flex-direction: row;
+      }
 
-        text-decoration: none;
-
-        &:hover{
-
-            text-decoration: none;
+      @include for-size("tablet") {
+        @include flexbox {
+          flex-direction: column;
         }
+      }
     }
-
-    img{
-
-        width: 100%;
-        height: auto;
-    }
-
-    article{
-
-        width: 100%;
-
-        a{
-
-            @include flexbox{
-        
-                justify-content: flex-start;
-                flex-direction: row; 
-            };
-        
-            @include for-size('tablet'){
-        
-                @include flexbox{
-                    flex-direction: column;
-                }
-            };
-        }
-    }
+  }
 }

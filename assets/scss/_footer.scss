@@ -2,67 +2,61 @@
 // Copyright (C) 2020 Ondrej Golasowski, Petr Kucera
 // ===============================================
 
-.footer{
+.footer {
+  margin-top: auto;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  background: var(--neutralLight);
+  @include flexbox {
+    justify-content: space-between;
+  }
 
-    margin-top: auto;
-    width: 100%;
-    height: 60px;
-    padding: 0 20px;
-    background: var(--neutralLight);
-    @include flexbox{
-        justify-content: space-between;
-    };
+  @include for-size("bp-down-500") {
+    min-height: 200px;
+    height: auto;
+    padding: 20px;
 
-    @include for-size('bp-down-500'){
+    @include flexbox {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+  }
 
-        min-height: 200px;
-        height: auto;
-        padding: 20px;
+  &__info {
+    @include flexbox {
+      flex-direction: row;
+    }
+    color: var(--neutralDark);
 
-        @include flexbox{
-            flex-direction: column-reverse;
-            justify-content: center;
-        }
+    @include for-size("bp-down-500") {
+      margin-top: 1rem;
+      flex-direction: column;
+
+      .delimiter {
+        display: none;
+      }
+
+      a {
+        margin-top: 0.5rem;
+      }
     }
 
-    &__info{
-
-        @include flexbox{
-            flex-direction: row;
-        };
-        color: var(--neutralDark);
-
-        @include for-size('bp-down-500'){
-        
-            margin-top: 1rem;
-            flex-direction: column;
-
-            .delimiter{
-                display: none;
-            }
-
-            a{
-                margin-top: .5rem;
-            }
-        }
-
-        .delimiter{
-            color: var(--neutralDark);
-            margin: 0 1rem; 
-        }
-
-        a{
-            color: var(--neutralDark);
-        }
-    }  
-
-    &__socials{  
-
-        @include flexbox;
-        img{
-
-            height: 30px;
-            margin-right: 20px;
-        }
+    .delimiter {
+      color: var(--neutralDark);
+      margin: 0 1rem;
     }
+
+    a {
+      color: var(--neutralDark);
+    }
+  }
+
+  &__socials {
+    @include flexbox;
+    img {
+      height: 30px;
+      margin-right: 20px;
+    }
+  }
 }

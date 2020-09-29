@@ -2,114 +2,91 @@
 // Copyright (C) 2020 Ondrej Golasowski, Petr Kucera
 // ===============================================
 
-@font-face{
-
-    font-family: logos;
-    src: url('assets/fonts/fondos.eot');
-    src:  url('assets/fonts/fondos.eot?v9p4ax');
-    src:  url('assets/fonts/fondos.eot?v9p4ax#iefix') format('embedded-opentype'),
-        url('assets/fonts/fondos.ttf?v9p4ax') format('truetype'),
-        url('assets/fonts/fondos.woff?v9p4ax') format('woff'),
-        url('assets/fonts/fondos.svg?v9p4ax#fondos') format('svg');
+@font-face {
+  font-family: logos;
+  src: url("assets/fonts/fondos.eot");
+  src: url("assets/fonts/fondos.eot?v9p4ax");
+  src: url("assets/fonts/fondos.eot?v9p4ax#iefix") format("embedded-opentype"),
+    url("assets/fonts/fondos.ttf?v9p4ax") format("truetype"),
+    url("assets/fonts/fondos.woff?v9p4ax") format("woff"),
+    url("assets/fonts/fondos.svg?v9p4ax#fondos") format("svg");
 }
 
-.author{
+.author {
+  &__info {
+    background: var(--neutralLight);
+    padding: 2rem;
 
-    
+    a {
+      color: var(--themeDark);
+      text-decoration: underline;
+      transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
 
-    &__info{
+      &:visited {
+        color: var(--themeDark);
+      }
 
-        background: var(--neutralLight);
-        padding: 2rem;
+      &:hover {
+        color: var(--themeTertiary);
+      }
+    }
+
+    &__photo {
+      @include flexbox {
+        flex-direction: column;
+      }
+    }
+    &__text {
+      max-width: 400px;
+
+      @include flexbox {
+        flex-direction: column;
+      }
+
+      &__description {
+        text-align: center;
+      }
+
+      &__soc {
+        font-family: logos;
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
 
         a {
-            color: var(--themeDark);
-            text-decoration: underline;
-            transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
-        
-            &:visited{
-                color: var(--themeDark);
-            }
-        
-            &:hover{
-        
-                color: var(--themeTertiary);
-            }
+          color: var(--black);
+          text-decoration: none;
+
+          &:visited {
+            color: var(--black);
+          }
         }
 
-        &__photo{
-
-            @include flexbox{
-
-                flex-direction: column;
-            }
+        #linked:hover {
+          color: #0e76a8;
         }
-        &__text{
-
-            max-width: 400px;
-
-            @include flexbox{
-
-                flex-direction: column;
-            }
-
-            &__description{
-
-                text-align: center;
-            }
-
-            &__soc{
-
-                font-family: logos;
-                font-size: 1.2rem;
-                margin-top: 0.5rem;
-                margin-bottom: 0.5rem;            
-
-                a{
-
-                    color: var(--black);
-                    text-decoration: none;
-
-                    &:visited{
-
-                        color: var(--black);
-                    }
-                }
-                
-                #linked:hover{
-
-                    color: #0e76a8;
-                }
-                #insta:hover{
-
-                    color: #fd5949;
-                }
-                #fb:hover{
-
-                    color: #3b5998;
-                }
-                #url:hover{
-
-                    color: var(--themeDark);
-                }
-                #soundclound:hover{
-
-                    color: #ff7700;
-                }
-                #twitter:hover{
-
-                    color: #00acee;
-                }
-                #youtube:hover{
-
-                    color: #c4302b;
-                }
-                #wikipedia:hover{
-
-                    color: #3D393A;
-                }
-            }
+        #insta:hover {
+          color: #fd5949;
         }
-
+        #fb:hover {
+          color: #3b5998;
+        }
+        #url:hover {
+          color: var(--themeDark);
+        }
+        #soundclound:hover {
+          color: #ff7700;
+        }
+        #twitter:hover {
+          color: #00acee;
+        }
+        #youtube:hover {
+          color: #c4302b;
+        }
+        #wikipedia:hover {
+          color: #3d393a;
+        }
+      }
     }
+  }
 }
