@@ -204,14 +204,14 @@ a.effect {
   }
 }
 
-// Youtube viedeo
+// Youtube video
 .wp-block-embed__wrapper {
   @include flexbox {
     flex-direction: column;
   }
 }
 
-//phone hide
+// Hide for phone
 #phone-hide {
   @include for-size("tablet") {
     display: none;
