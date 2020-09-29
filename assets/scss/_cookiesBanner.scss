@@ -83,15 +83,14 @@
       text-align: justify;
       line-height: 1.3rem;
     }
+    a {
+      color: var(--neutralDark);
+    }
     &__needed {
       margin-top: 3rem;
     }
     &__no-needed {
       margin-top: 3rem;
-
-      a {
-        color: var(--neutralDark);
-      }
     }
   }
 
