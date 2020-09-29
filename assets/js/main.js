@@ -4,10 +4,6 @@
  * @license GPL(GPLv3)
  */
 
- /**
-  * Load functions when page is fully loaded.
-  */
-
 const cookieNoticeMsg = `<div class="cookies-notice-settings">
 <a href="" id="cookies-setting-close"><i class="ms-Icon ms-Icon--ChromeClose" aria-hidden="true"></i></a>
 <div class="cookies-notice-settings__info">
@@ -75,95 +71,106 @@ const cookieNoticeMsg = `<div class="cookies-notice-settings">
 </div>
 </div>`;
 
+/*
+ *  Load functions when page is fully loaded.
+ */
+
 $(document).ready(() => {
+  searchForm();
+  menu();
+  removeImageAttr();
+  addTOCIcon();
+  window.onscroll = () => {
+    backTopButton();
+  };
+  cookiesSetting();
+  makeIframeVisible();
+});
 
-        searchForm();
-        menu();
-        removeImageAttr();
-        addTOCIcon();
-        window.onscroll = () => { backTopButton(); };
-        cookiesSetting();
-        makeIframeVisible();
-
-    });
-
-function backTopButton(){
-
-    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
-        $('#backTop').addClass("show");
-    } else {
-        $('#backTop').removeClass("show");
-    }
+function backTopButton() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    $("#backTop").addClass("show");
+  } else {
+    $("#backTop").removeClass("show");
+  }
 }
 
-function goTop(){
-    if (document.body.scrollTop !== 0 || document.documentElement.scrollTop !== 0) {
-        window.scrollBy(0, -Math.max(1, Math.floor((document.body.scrollTop || document.documentElement.scrollTop) / 10)));
-        requestAnimationFrame(goTop);
-    }
+function goTop() {
+  if (
+    document.body.scrollTop !== 0 ||
+    document.documentElement.scrollTop !== 0
+  ) {
+    window.scrollBy(
+      0,
+      -Math.max(
+        1,
+        Math.floor(
+          (document.body.scrollTop || document.documentElement.scrollTop) / 10
+        )
+      )
+    );
+    requestAnimationFrame(goTop);
+  }
 }
 
-function menu(){
-
-    $('#button_menu').on('click', () => {
-
-            $('#button_menu').toggleClass('active');
-            $('#section_menu').toggleClass('active');
-        });
+function menu() {
+  $("#button_menu").on("click", () => {
+    $("#button_menu").toggleClass("active");
+    $("#section_menu").toggleClass("active");
+  });
 }
 
-function searchForm(){
+function searchForm() {
+  $("#input_searchSubmit").on("click", () => {
+    $("#input_search").submit();
+  });
 
-    $('#input_searchSubmit').on('click', () => {
-            $('#input_search').submit();
-        });
+  $("#input_search").on({
+    mouseenter: () => {
+      $("#input_searchInput").addClass("active");
+      $("#logo_stclogo").addClass("hidden");
+    },
 
-    $('#input_search').on({
+    focuson: () => {
+      $("#input_searchInput").addClass("active");
+      $("#logo_stclogo").addClass("hidden");
+    },
 
-        mouseenter: () => {
-            $('#input_searchInput').addClass('active');
-            $('#logo_stclogo').addClass('hidden');
-        },
+    mouseleave: () => {
+      if (
+        !$("#input_searchInput").val() &&
+        !$("#input_searchInput").is(":focus")
+      ) {
+        $("#input_searchInput").removeClass("active");
+        $("#logo_stclogo").removeClass("hidden");
+      }
+    },
 
-        focuson: () => {
-            $('#input_searchInput').addClass('active');
-            $('#logo_stclogo').addClass('hidden');
-        },
-
-        mouseleave: () => {
-
-            if(!$('#input_searchInput').val() && !$('#input_searchInput').is(':focus')){
-                $('#input_searchInput').removeClass('active');
-                $('#logo_stclogo').removeClass('hidden');
-            } 
-        },
-
-        focusout: () => {
-
-            if(!$('#input_searchInput').val()){
-                $('#input_searchInput').removeClass('active');
-                $('#logo_stclogo').removeClass('hidden');
-            } 
-        }
-    });
+    focusout: () => {
+      if (!$("#input_searchInput").val()) {
+        $("#input_searchInput").removeClass("active");
+        $("#logo_stclogo").removeClass("hidden");
+      }
+    },
+  });
 }
 
 /**
  * @description Remove fixed img dimensions attributes.
  */
-function removeImageAttr(){
-    $('img').removeAttr('width height');
+function removeImageAttr() {
+  $("img").removeAttr("width height");
 }
 
 /**
  * @description Add MS icon to the Easy TOC plugin's TOC.
  */
-function addTOCIcon(){
-    $('.ez-toc-icon-toggle').addClass('ms-Icon ms-Icon--ContextMenu');
+function addTOCIcon() {
+  $(".ez-toc-icon-toggle").addClass("ms-Icon ms-Icon--ContextMenu");
 }
 
-function cookiesSetting(){
-    $('#cookies-notice-settings-triger').on('click', () => {
-            $('#ce-banner-html').after(cookieNoticeMsg);
-        });
+function cookiesSetting() {
+  $("#cookies-notice-settings-triger").on("click", () => {
+    $("#ce-banner-html").after(cookieNoticeMsg);
+  });
 }
