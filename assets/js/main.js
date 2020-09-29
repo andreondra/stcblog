@@ -147,7 +147,7 @@ function cookiesSetting() {
                 oddíl C, vložka 38582.
             </p>
             <h5>​6. Zásady ochrany osobních údajů</h5>
-            <p>Podrobnější informace o souborech cookies a zpracování tvých osobních údajů najdete v našich Zásadách ochrany osobních údajů.</p>
+            <p>Podrobnější informace o souborech cookies a zpracování tvých osobních údajů najdete v našich <a href="https://studuj.digital/zasady-ochrany-osobnich-udaju/">Zásadách ochrany osobních údajů</a>.</p>
         </div>
         <div class="cookies-notice-settings__info__needed">
             <h4>Nezbytné</h4>
