@@ -2,312 +2,271 @@
 // Copyright (C) 2020 Ondrej Golasowski, Petr Kucera
 // ===============================
 
+.post {
+  background-color: var(--white);
 
-.post{ 
+  @include flexbox {
+    width: 80vw;
+    flex-direction: column;
+  }
 
-    background-color: var(--white);
+  #backTop {
+    cursor: pointer;
+    position: fixed;
+    bottom: 4rem;
+    right: -4rem;
+    background: var(--themePrimary);
+    opacity: 0.5;
+    padding: 0.5rem;
+    transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
 
-    @include flexbox{
+    &:hover {
+      opacity: 1;
+    }
 
-        width: 80vw;   
+    &.show {
+      right: 4rem;
+    }
+
+    @include for-size("tablet") {
+      bottom: 1.5rem;
+
+      &.show {
+        right: 1.5rem;
+      }
+    }
+
+    i {
+      color: var(--white);
+      font-size: 2rem;
+
+      @include for-size("tablet") {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__header {
+    &__meta {
+      margin-top: 1rem;
+      @include flexbox {
         flex-direction: column;
-    };
+      }
 
-    #backTop{
-
-        cursor: pointer;
-        position: fixed;
-        bottom: 4rem;
-        right: -4rem;
-        background: var(--themePrimary);
-        opacity: .5;
-        padding: .5rem;
-        transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
-
-        &:hover{
-            opacity: 1;
+      &__group {
+        @include flexbox {
+          flex-direction: row;
         }
+      }
 
-        &.show{
-            right: 4rem;
+      &__date {
+        color: var(--black);
+      }
+
+      &__category {
+        a {
+          text-decoration: none;
+          color: var(--themePrimary);
         }
+      }
 
-        @include for-size('tablet'){
-
-            bottom: 1.5rem;
-
-            &.show{
-                right: 1.5rem;
-            }
-        }
-
-        i{ 
-            color: var(--white);
-            font-size: 2rem;
-
-            @include for-size('tablet'){
-                font-size: 1.5rem;
-            }
-        }
-    }
-
-    &__header{
-
-        &__meta{
-
-            margin-top: 1rem;
-            @include flexbox{
-                flex-direction: column;
-            };
-
-            &__group{
-                
-                @include flexbox{
-                    flex-direction: row;
-                };
-            }
-
-            &__date{
-                color: var(--black);
-            }
-
-            &__category{
-
-                a{
-                    text-decoration: none;
-                    color: var(--themePrimary);
-                }
-            }
-
-            &__tags{ 
-
-                margin-top: .5rem;
-                white-space: wrap;
-                text-align: center;
-
-                a{
-
-                    text-decoration: none;
-                    color: var(--themePrimary);
-                    
-                    &:before{
-                        content: "#";
-                    }
-                }
-            }
-        }
-    }
-
-    &__content{
-
-        font-size: 1.1rem;
-        line-height: 1.7rem;
-        margin-top: 1.5rem;
+      &__tags {
+        margin-top: 0.5rem;
+        white-space: wrap;
+        text-align: center;
 
         a {
-            color: var(--themeDark);
-            text-decoration: underline;
-            transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
-            word-break: break-word;
-        
-            &:visited{
-                color: var(--themeDark);
-            }
-        
-            &:hover{
-        
-                color: var(--themeTertiary);
-            }
+          text-decoration: none;
+          color: var(--themePrimary);
+
+          &:before {
+            content: "#";
+          }
         }
+      }
+    }
+  }
 
-        // make code reposive
+  &__content {
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    margin-top: 1.5rem;
 
-        /*pre{
+    a {
+      color: var(--themeDark);
+      text-decoration: underline;
+      transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+      word-break: break-word;
+
+      &:visited {
+        color: var(--themeDark);
+      }
+
+      &:hover {
+        color: var(--themeTertiary);
+      }
+    }
+
+    // make code reposive
+
+    /*pre{
 
             background-color: var(--neutralLighter);
             width: 80vw;
 
         }*/
 
-        li{
+    li {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
 
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
+    ul {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ol {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .wp-block-button {
+      transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      &__link {
+        background: var(--themePrimary);
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    // style of quote
+    .wp-block-quote {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+
+      padding-left: 2rem;
+      color: var(--neutralDark);
+
+      border-left: 2px solid var(--neutralTertiaryAlt);
+
+      p {
+        color: var(--neutralDark);
+      }
+
+      @include for-size("tablet") {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        border: none;
+      }
+    }
+
+    // style of file for download
+    .wp-block-file {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+      @include flexbox {
+        flex-direction: column-reverse;
+      }
+
+      &__button {
+        transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__footer {
+    @include flexbox {
+      flex-direction: column;
+    }
+
+    &__author {
+      width: 80vw;
+      max-width: 1000px;
+
+      padding: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+      background: var(--neutralLight);
+
+      @include flexbox {
+        flex-direction: row;
+        align-items: center;
+        align-content: flex-start;
+        justify-content: flex-start;
+      }
+
+      @include for-size("tablet") {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        @include flexbox {
+          flex-direction: column;
+          align-content: center;
+          justify-content: center;
+        }
+      }
+
+      &__data {
+        margin-left: 2rem;
+
+        @include for-size("tablet") {
+          margin-left: 0;
         }
 
-        ul{
-
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
+        @include flexbox {
+          flex-direction: column;
+          align-items: flex-start;
+          align-content: flex-start;
         }
 
-        ol{
+        h2 {
+          margin: 0;
 
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .wp-block-button{
-
-            transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
-            
-            a{
-                text-decoration: none;
-                color: white;
-            }
-
-            &__link{
-                background: var(--themePrimary);
-            }
-
-            &:hover{
-                transform: scale(1.1);
-            }
-        }
-
-        // style of quote
-        .wp-block-quote{
-
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            margin-left: 2rem;
-            margin-right: 2rem;
-
-            padding-left: 2rem;
-            color: var(--neutralDark);
-
-            border-left: 2px solid var(--neutralTertiaryAlt);
-
-            p{
-
-                color: var(--neutralDark);
-            }
-
-            @include for-size('tablet'){
-
-                margin-left: 0;
-                margin-right: 0;
-                padding: 0;
-                border: none;
-            }
-        }
-
-        // style of file for download
-        .wp-block-file{
-
+          @include for-size("tablet") {
             margin-top: 1rem;
-            margin-bottom: 1rem;
-
-            @include flexbox{
-
-                flex-direction: column-reverse;
-            };
-
-            &__button{
-
-                transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
-
-                &:hover{
-                    transform: scale(1.1);
-                }
-            }
-        }
-    }
-
-
-    &__footer{
-
-        @include flexbox{
-
-            flex-direction: column;
-        };
-
-        &__author{
-
-            width: 80vw;
-            max-width: 1000px;
-
-            padding: 2rem;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-
-            background: var(--neutralLight);
-
-            @include flexbox{
-
-                flex-direction: row;
-                align-items: center;
-                align-content: flex-start;
-                justify-content: flex-start;
-            };
-
-            @include for-size('tablet'){
-
-                padding-top: 2rem;
-                padding-bottom: 2rem;
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
-
-                @include flexbox{
-
-                    flex-direction: column;
-                    align-content: center;
-                    justify-content: center;
-                };
-            };
-
-            &__data{
-
-                margin-left: 2rem;
-
-                @include for-size('tablet'){
-
-                    margin-left: 0;
-                }
-
-                @include flexbox{
-
-                    flex-direction: column;
-                    align-items: flex-start;
-                    align-content: flex-start;
-                };
-
-                h2{
-
-                    margin: 0;
-
-                    @include for-size('tablet'){
-
-                        margin-top: 1rem;
-                    };
-                }
-
-                &__name{
-
-                    text-decoration: none;
-                    color: var(--themePrimary);
-                }
-            }
+          }
         }
 
+        &__name {
+          text-decoration: none;
+          color: var(--themePrimary);
+        }
+      }
     }
+  }
 }
 
-
-.avatar{
-
-    border-color: var(--themePrimary);
-    border-style: solid;
-    border-width: 0px;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    
+.avatar {
+  border-color: var(--themePrimary);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
 }
 
-figcaption{
-
-    text-align: center;
-    color: var(--neutralDark);
-    font-size: 1rem;
+figcaption {
+  text-align: center;
+  color: var(--neutralDark);
+  font-size: 1rem;
 }
