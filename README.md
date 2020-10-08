@@ -10,16 +10,16 @@ Based on [STCblog template](https://github.com/andreondra/stcblog).
 
 ## Features
 ### Responsive
-![](docs/img/readme1.gif)
+![responsivity showcase](docs/img/readme1.gif)
 
 ### Mobile-ready menu
-![](docs/img/readme2.gif)
+![menu on mobile](docs/img/readme2.gif)
 
 ### Animated search bar
-![](docs/img/readme3.gif)
+![search bar](docs/img/readme3.gif)
 
 ### Support for [Easy Table of Contents](https://wordpress.org/plugins/easy-table-of-contents/)
-![](docs/img/readme4.gif)
+![TOC](docs/img/readme4.gif)
 
 ## License and copyright
 Project is licensed under GNU GPLv3.
