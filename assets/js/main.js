@@ -4,6 +4,11 @@
  * @license GPL(GPLv3)
  */
 
+ /* 
+  * DOM
+ */
+const searchInputElement = document.getElementById("input_searchInput");
+
 /*
  *  Load functions when page is fully loaded.
  */
@@ -19,6 +24,8 @@ $(document).ready(() => {
   cookiesSetting();
   makeIframeVisible();
 });
+
+const validateSearch = () => searchInputElement.value !== "";
 
 function backTopButton() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
