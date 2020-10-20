@@ -10,6 +10,7 @@
 
 $(document).ready(() => {
   searchForm();
+  change_text_via_date();
   menu();
   removeImageAttr();
   addTOCIcon();
@@ -177,4 +178,16 @@ function cookiesSetting() {
 
     $("#ce-banner-html").after(cookieNoticeMsg);
   });
+}
+
+/**
+ * @description changing text in campaign banner
+ */
+function change_text_via_date(){
+  var date_now = new Date();
+  var some_day = new Date();
+  some_day.setFullYear(2020,10,3);
+  if(date_now > some_day) {
+    $("#campaign-date").text('10. 11. 2020');
+  }
 }
