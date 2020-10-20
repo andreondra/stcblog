@@ -1,0 +1,22 @@
+// = author styles =
+// Copyright (C) 2020 Irena Andraskova, Petr Kucera
+// ===============================================
+.campaign-banner{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--msftyellow);
+    @include flexbox{
+        flex-direction: column;
+    }
+    p{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        color: var(--campaign-banner-black);
+        font-size: 1.4rem;
+        width: 90vw;
+        a{
+            color: var(--black);
+        }
+    }
+}
