@@ -190,10 +190,19 @@ function cookiesSetting() {
 /**
  * @description changing text in campaign banner
  */
-function change_text_via_date(){
-  const date_now = new Date();
-  const some_day = new Date(2020, 10, 3);
+function change_text_via_date() {
+  
+  const domquery = document.querySelector(".campaign-banner");
+  
+  const date_now = new Date().getTime();
+  
+  const some_day = new Date("11/3/2020 UTC+1").getTime();
+  const final_day = new Date("11/13/2020 UTC+1").getTime();
+  
   if(date_now > some_day) {
-    $("#campaign-date").text('10. 11. 2020');
+    $("#campaign-date").text('13. 11. 2020');
+    if(date_now > final_day) {
+      domquery.style.display = "none";
+    }
   }
 }
