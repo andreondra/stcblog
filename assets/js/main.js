@@ -200,7 +200,7 @@ function change_text_via_date() {
   const final_day = new Date("11/11/2020 UTC+1").getTime();
   
   if(date_now > some_day) {
-    $("#campaign-date").text('13. 11. 2020');
+    $("#campaign-date").text('10. 11. 2020');
     if(date_now > final_day) {
       domquery.style.display = "none";
     }
