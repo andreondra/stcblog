@@ -304,7 +304,20 @@ function additional_mime($mime_types) {
   return $mime_types;
 }
 
-add_filter( 'upload_mimes', 'additional_mime', 1, 1 );
+add_filter( 'upload_mimes', 'additional_mime', 99 );
+
+function add_allow_upload_extension_exception( $types, $file, $filename, $mimes ) {
+    // Do basic extension validation and MIME mapping
+    $wp_filetype = wp_check_filetype( $filename, $mimes );
+    $ext         = $wp_filetype['ext'];
+    $type        = $wp_filetype['type'];
+    if( in_array( $ext, array( 'mcworld', 'zip' ) ) ) { // Overrident extensions
+        $types['ext'] = $ext;
+        $types['type'] = $type;
+    }
+    return $types;
+}
+add_filter( 'wp_check_filetype_and_ext', 'add_allow_upload_extension_exception', 99, 4 );
 
 /**
  * Remove footer in admin-portal
