@@ -358,9 +358,14 @@ add_filter('wp_is_application_passwords_available', '__return_false');
  * @author Matyas Koc
  */
 add_filter('xmlrpc_methods', function($methods) {
-	unset($methods['pingback.ping']);
-	return $methods;
+    unset($methods['pingback.ping']);
+    return $methods;
 });
+add_filter('wp_headers', 'disable_x_pingback');
+function disable_x_pingback($headers) {
+    unset($headers['X-Pingback']);
+    return $headers;
+}
 add_filter('xmlrpc_enabled', '__return_false');
 
 ?>
