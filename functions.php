@@ -345,4 +345,11 @@ add_filter('admin_footer_text', '__return_empty_string', 11);
 add_filter('update_footer', '__return_empty_string', 11);
 add_filter('admin_footer_text', '__return_empty_string');
 
+/**
+ * Disable application passwords
+ *
+ * @author Matyas Koc
+ */
+add_filter('wp_is_application_passwords_available', '__return_false');
+
 ?>
