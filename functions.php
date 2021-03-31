@@ -352,4 +352,11 @@ add_filter('admin_footer_text', '__return_empty_string');
  */
 add_filter('wp_is_application_passwords_available', '__return_false');
 
+/**
+ * Disable XML-RPC
+ *
+ * @author Matyas Koc
+ */
+add_filter( 'xmlrpc_enabled', '__return_false' );
+
 ?>
