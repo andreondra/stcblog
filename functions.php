@@ -250,54 +250,7 @@ function reading_time() {
     return $totalreadingtime;
 }
 
-/**
- * Exporting posts to csv file
- *
- * @author Petr Kučera
- */
-/*
-add_action( 'manage_posts_extra_tablenav', 'admin_post_list_top_export_button', 20, 1 );
-function admin_post_list_top_export_button( $which ) {
-    global $typenow;
- 
-    if ( 'post' === $typenow && 'top' === $which ) {
-        ?>
-        <input type="submit" name="export_all_posts" id="export_all_posts" class="button button-primary" value="Exportovat do csv" />
-        <?php
-    }
-}
-add_action( 'init', 'func_export_all_posts' );
-function func_export_all_posts() {
-    if(isset($_GET['export_all_posts'])) {
-        $arg = array(
-                'post_type' => 'post',
-                'post_status' => 'publish',
-                'posts_per_page' => -1,
-            );
- 
-        global $post;
-        $arr_post = get_posts($arg);
-        if ($arr_post) {
- 
-            header('Content-type: text/csv');
-            header('Content-Disposition: attachment; filename="wp.csv"');
-            header('Pragma: no-cache');
-            header('Expires: 0');
- 
-            $file = fopen('php://output', 'w');
- 
-            fputcsv($file, array('Post Title', 'URL'));
- 
-            foreach ($arr_post as $post) {
-                setup_postdata($post);
-                fputcsv($file, array(get_the_title(), get_the_permalink()));
-            }
- 
-            exit();
-        }
-    }
-}
-*/
+
 /**
  * Remove core update notifications for common users
  *
@@ -406,5 +359,20 @@ function disable_x_pingback($headers) {
     return $headers;
 }
 add_filter('xmlrpc_enabled', '__return_false');
+
+
+/**
+ * Remove Gutenberg Block Library CSS from loading on the frontend
+ * 
+ * @author Petr Kucera
+ */
+function smartwp_remove_wp_block_library_css(){
+    if (is_front_page() || is_home()) {
+        wp_dequeue_style( 'wp-block-library' );
+        // wp_dequeue_style( 'wp-block-library-theme' );
+        // wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
+    }
+} 
+add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
 
 ?>
